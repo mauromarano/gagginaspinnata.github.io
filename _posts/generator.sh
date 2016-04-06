@@ -17,8 +17,8 @@ author="Mauro Marano"
 
 
 read -p "Title: " title
-read -p "Tags: " tags
-read -p "Categries : " categories
+# read -p "Tags: " tags
+# read -p "Categries : " categories
 
 #creatin the filename
 filename=$( echo ${title// /-} | awk '{print tolower($0)}'| sed 's/[^a-z\-]*//g')
@@ -36,16 +36,16 @@ echo "date: `date +%F`" >> $filename
 
 # ### Adding tags on new lines with a dash in front (separated with comma)
 
-if [ "$tags" ]; then
-  echo "tags:
-- $tags" | sed 's/,/\
--/g' >> $filename
-fi
-if [ "$categories" ]; then
-  echo "categories:
-- $tags" | sed 's/,/\
--/g' >> $filename
-fi
+# if [ "$tags" ]; then
+#   echo "tags:
+# - $tags" | sed 's/,/\
+# -/g' >> $filename
+# fi
+# if [ "$categories" ]; then
+#   echo "categories:
+# - $tags" | sed 's/,/\
+# -/g' >> $filename
+# fi
 
 echo "---" >> $filename
 echo >> $filename
