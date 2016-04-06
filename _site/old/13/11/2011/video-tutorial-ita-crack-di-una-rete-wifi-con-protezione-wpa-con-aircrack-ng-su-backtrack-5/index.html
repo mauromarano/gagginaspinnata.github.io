@@ -1,0 +1,2426 @@
+<!doctype html>
+<!--[if IEMobile 7 ]> <html lang="it-IT"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="it-IT" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="it-IT" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="it-IT" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="it-IT" class="no-js"><!--<![endif]-->
+
+<!-- Mirrored from www.mauromarano.it/blog/13/11/2011/video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wpa-con-aircrack-ng-su-backtrack-5/ by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 17 Oct 2013 13:21:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5 | Mauro&#039;s Page</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+ 
+ 
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../wp-content/themes/wordpress-bootstrap/library/images/icons/h/apple-touch-icon.png">
+ 
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../wp-content/themes/wordpress-bootstrap/library/images/icons/m/apple-touch-icon.png">
+ 
+<link rel="apple-touch-icon-precomposed" href="../../../../wp-content/themes/wordpress-bootstrap/library/images/icons/l/apple-touch-icon-precomposed.png">
+ 
+<link rel="shortcut icon" href="../../../../wp-content/themes/wordpress-bootstrap/library/images/icons/l/apple-touch-icon.png">
+ 
+<link rel="shortcut icon" href="../../../../wp-content/themes/wordpress-bootstrap/favicon.ico">
+<link rel="pingback" href="../../../../xmlrpc.php">
+ 
+<link rel='stylesheet' id='wordpress-popular-posts-css' href='../../../../wp-content/plugins/wordpress-popular-posts/style/wppc0b8.css?ver=2.3.7' type='text/css' media='all'/>
+<link rel='stylesheet' id='YoutubeShortcodeMargenn-css' href='../../../../wp-content/plugins/youtube-shortcode/youtube-shortcodea7a0.css?ver=3.6.1' type='text/css' media='all'/>
+<link rel='stylesheet' id='codecolorer-css' href='../../../../wp-content/plugins/codecolorer/codecolorere2dc.css?ver=0.9.9' type='text/css' media='screen'/>
+<link rel='stylesheet' id='wp_dlmp_styles-css' href='../../../../wp-content/plugins/download-monitor/page-addon/stylesa7a0.css?ver=3.6.1' type='text/css' media='all'/>
+<script type='text/javascript' src='../../../../wp-includes/js/comment-reply.mina7a0.js?ver=3.6.1'></script>
+<link rel='shortlink' href='../../../../index230e.html?p=2059'/>
+<style type='text/css'>.download-info .download-button{background-image:url(../../../../wp-content/plugins/download-monitor/page-addon/downloadbutton.gif);}.download-info .more-button{background-image:url(http://www.mauromarano.it/blog/wp-content/plugins/download-monitor/page-addon/morebutton.gif);}</style>
+<style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important;}</style>
+ 
+<meta name="keywords" content="aircrack, aircrack mac, alternativa kismac, backtrack, backtrack 5, chiave di rete, come crackare una password wpa, come crackare una rete wifi, crack, crackare aircrack, crackare password, crackare rete wifi, cracking, guida, guida aircrack, guida aircrack crack rete wifi, guida aircrack ita, guida aircrack italiano, guida aircrack-ng, guida ita, ita, italiano, kismac, kismac mac, kismac vs aircrack, kismet, kismet mac, linux, mac, password, recuperare password wifi, recuperare password wpa, recupero, ritrovare, tutorial, tutorial aircrack, tutorial aircrack backtrack, tutorial aircrack ita, tutorial aircrack italiano, tutorial aircrack password wpa, tutorial aircrack password wpa ita, tutorial aircrack-ng, tutorial crack rete wifi, tutorial crack rete wpa, tutorial crackare rete wifi, tutorial crackare wifi, tutorial ita, tutorial rete wpa, video guida, video tutorial hd alta definizione alta qualità qualità velcemente mauromarnao.it, wifi, windows, wpa, [video tutorial ita] crack di una rete wifi con protezione wpa con aircrack-ng su backtrack 5,aircrack mac,alternativa kismac,backtrack,backtrack 5,chiave di rete,come crackare una password wpa,come crackare una rete wifi,crack,crackare aircrack,crackare password,crackare rete wifi,cracking,guida,guida aircrack,guida aircrack crack rete wifi,guida aircrack ita,guida aircrack italiano,guida aircrack-ng,guida ita,ita,italiano,kismac,kismac mac,kismac vs aircrack,kismet,kismet mac,linux,mac,password,recuperare password wifi,recuperare password wpa,recupero,ritrovare,tutorial,tutorial aircrack,tutorial aircrack backtrack,tutorial aircrack ita,tutorial aircrack italiano,tutorial aircrack password wpa,tutorial aircrack password wpa ita,tutorial aircrack-ng,tutorial crack rete wifi,tutorial crack rete wpa,tutorial crackare rete wifi,tutorial crackare wifi,tutorial ita,tutorial rete wpa,video guida,video tutorial hd alta definizione alta qualità qualità velcemente mauromarnao.it,wifi,windows,wpa,[video tutorial ita] crack di una rete wifi con protezione wpa con aircrack-ng su backtrack 5"/>
+<link rel="canonical" href="index.html"/>
+ 
+ 
+<link rel="stylesheet" href="../../../../wp-content/themes/wordpress-bootstrap/css/bootstrap.min.css">
+<style>h1,h2,h3,h4,h5,h6{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:bold;color:#404040;}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;color:#404040;}.navbar-inner,.navbar .fill{background-color:#222222;}.navbar-inner,.navbar .fill{background-image:-khtml-gradient(linear,left top,left bottom,from(#222222),to(#333333));background-image:-moz-linear-gradient(top,#222222,#333333);background-image:-ms-linear-gradient(top,#222222,#333333);background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#222222),color-stop(100%,#333333));background-image:-webkit-linear-gradient(top,#222222,#3333332);background-image:-o-linear-gradient(top,#222222,#333333);background-image:linear-gradient(top,#222222,#333333);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#222222',endColorstr='#3333332',GradientType=0);}.navbar .nav li a{color:#BFBFBF;}.navbar .nav li a:hover{color:#FFFFFF;}.dropdown-menu li>a:hover,.dropdown-menu .active>a,.dropdown-menu .active>a:hover{background-color:#0088CC;}.dropdown-menu a{color:#555555!important;}.hero-unit{background-color:#F5F5F5;}#main article{border-bottom:none;}</style>
+<link rel="stylesheet" href="../../../../wp-content/themes/wordpress-bootstrap/css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="../../../../wp-content/themes/wordpress-bootstrap/style.css">
+ 
+<!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
+		<![endif]-->
+ 
+<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(unescape('%3Cscript src="http://www.mauromarano.it/blog/wp-content/themes/wordpress-bootstrap/library/js/libs/jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
+<script src="../../../../wp-content/themes/wordpress-bootstrap/library/js/modernizr.full.min.js"></script>
+</head>
+<body class="single single-post postid-2059 single-format-aside">
+<header role="banner">
+<div id="inner-header" class="clearfix">
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid nav-container">
+<nav role="navigation">
+<a class="brand" id="logo" title="Stay hungry, stay foolish" href="http://www.mauromarano.it/blog">Mauro&#039;s Page</a>
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<div class="nav-collapse">
+<ul id="menu-top_menu" class="nav"><li id="menu-item-2396" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="../../../../diventa-autore/index.html">Diventa autore</a></li>
+<li id="menu-item-2276" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="../../../../guide-per-il-jailbreak/index.html">Guide per il JailBreak</a></li>
+<li id="menu-item-2277" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="../../../../downloads/index.html">Downloads</a></li>
+<li id="menu-item-2611" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.mauromarano.it/contact.php">Contattami</a></li>
+<li id="menu-item-2401" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="../../../../wp-admin/index.html">Login</a></li>
+</ul> </div>
+</nav>
+<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="http://www.mauromarano.it/blog/">
+<input name="s" id="s" type="text" class="search-query" placeholder="Search">
+</form>
+</div>
+</div>
+</div>
+</div>  
+<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-2651397-3']);
+		  _gaq.push(['_setDomainName', 'mauromarano.it']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+</header>  
+<div class="container-fluid">
+<div id="content" class="clearfix row-fluid">
+<div id="main" class="span8 clearfix" role="main">
+<article id="post-2059" class="post-2059 post type-post status-publish format-aside hentry category-hacking category-linux category-sicurezza-informatica tag-aircrack tag-aircrack-mac tag-alternativa-kismac tag-backtrack tag-backtrack-5 tag-chiave-di-rete tag-come-crackare-una-password-wpa tag-come-crackare-una-rete-wifi tag-crack tag-crackare-aircrack tag-crackare-password tag-crackare-rete-wifi tag-cracking tag-guida tag-guida-aircrack tag-guida-aircrack-crack-rete-wifi tag-guida-aircrack-ita tag-guida-aircrack-italiano tag-guida-aircrack-ng tag-guida-ita tag-ita tag-italiano tag-kismac tag-kismac-mac tag-kismac-vs-aircrack tag-kismet tag-kismet-mac tag-linux tag-mac tag-password tag-recuperare-password-wifi tag-recuperare-password-wpa tag-recupero tag-ritrovare tag-tutorial tag-tutorial-aircrack tag-tutorial-aircrack-backtrack tag-tutorial-aircrack-ita tag-tutorial-aircrack-italiano tag-tutorial-aircrack-password-wpa tag-tutorial-aircrack-password-wpa-ita tag-tutorial-aircrack-ng tag-tutorial-crack-rete-wifi tag-tutorial-crack-rete-wpa tag-tutorial-crackare-rete-wifi tag-tutorial-crackare-wifi tag-tutorial-ita tag-tutorial-rete-wpa tag-video-guida tag-video-tutorial-hd-alta-definizione-alta-qualita-qualita-velcemente-mauromarnao-it tag-wifi tag-windows tag-wpa tag-video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wpa-con-aircrack-ng-su-backtrack-5 clearfix" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<header>
+<div class="page-header"><h1 class="single-title" itemprop="headline">[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5</h1></div>
+<p class="meta">Posted <time datetime="2011-11-13" pubdate>13 novembre 2011</time> by <a href="../../../../author/mauro/index.html" title="Articoli scritti da: Mauro" rel="author">Mauro</a> <span class="amp">&</span> filed under <a href="../../../../category/hacking/index.html" title="Visualizza tutti gli articoli in Hacking" rel="category tag">Hacking</a>, <a href="../../../../category/linux/index.html" title="Visualizza tutti gli articoli in Linux" rel="category tag">Linux</a>, <a href="../../../../category/sicurezza-informatica/index.html" title="Visualizza tutti gli articoli in Sicurezza informatica" rel="category tag">Sicurezza informatica</a>.</p>
+</header>  
+ 
+<a href="http://www.dmca.com/Protection/Status.aspx?ID=e520ed01-e531-4202-a2f4-4855990632f4" title="DMCA"> <img src="http://images.dmca.com/Badges/dmca_protected_sml_120p.png?ID=e520ed01-e531-4202-a2f4-4855990632f4" alt="DMCA.com"/></a>
+ 
+<section class="post_content clearfix" itemprop="articleBody">
+<p style="text-align: center;"><img class="aligncenter" src="../../../../wp-content/uploads/2011/06/tutorial_crack_password_wpa_mauromaranoit.jpg" alt="Tutorial Crack Password wpa Mauromarano.it" width="433" height="290"/></p>
+<p>Dopo aver ricevuto tantissime richieste ho finalmente deciso di spiegarvi come crackare una rete wifi con cifratura WPA!<br/>
+Intanto vi ricordo i miei due precedenti tutorial sul crack di una rete con cifratura WEP:</p>
+<ul>
+<li><a title="[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione WEP con AirCrack-ng su backtrack 5  | Mauro's Page" href="../../../../index09e5.html?p=1576">[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione WEP con AirCrack-ng su backtrack 5</a></li>
+<li><a title="[VIDEO TUTORIAL]Crack di una rete wifi WEP su Mac OSx con KisMac | Mauro's Page" href="../../../../index8303.html?p=1421">[VIDEO TUTORIAL]Crack di una rete wifi WEP su Mac OSx con KisMac</a></li>
+</ul>
+<p>Cosi come nei miei due precedenti tutorial farò sia una guida sull’utilizzo della suite aircrack-ng su backtrack 5 sia una guida sull’utilizzo di kismac su mac osx. Il consiglio, cosi come nei tutorial sulle reti WEP, è di utilizzare sempre la suite aircrack-ng in quanto è molto più aggiornata, veloce e potente.</p>
+<h2><span style="color: #ff0000;">Attenzione</span></h2>
+<p><span style="color: #000000;">Crackare, o tentare di farlo, una rete wifi altrui (non propria) è illegale e punibile legalmente. Non fate esperimenti su reti di terzi perchè è illegale ed è vietato farlo. </span></p>
+<p><span style="color: #000000;">Questo tutorial vuole avere solo uno scopio informativo, didattico. </span></p>
+<p><span style="color: #000000;">Non assecondiamo in nessun modo chi vuole compiere atti di pirateria informatica. </span></p>
+<p><span style="color: #ff0000;"><span style="color: #000000;">L&#8217;etica hacker è una cosa molto importante e MAI nessuno hacker oserebbe sfruttare le proprie conoscenze per arrecare danni a terzi. Ci tengo a sottolineare questa cosa perchè c&#8217;è una bella differenza tra hacker, cracker e lamer. Ma questa è un&#8217;altra storia..</span></span></p>
+<p><span id="more-2059"></span></p>
+<h2 id="requisiti">Requisiti</h2>
+<p>Affinchè voi capiate qualcosa è importante che:</p>
+<ul>
+<li>Non copiate ed incollate il codice come delle scimmie ubriache! Sforzatevi di capire il funzionamento e il procedimento utilizzato.</li>
+<li>Nonostante il procedimento sia <strong>completamente diverso</strong> sarebbe bene aver letto il tutorial <a title="[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione WEP con AirCrack-ng su backtrack 5  | Mauro's Page" href="../../../../2011/05/21/video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wep-con-aircrack-ng-su-backtrack-5/comment-page-1/index.html#comment-1863">[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione WEP con AirCrack-ng su backtrack 5</a> per avere più nozioni di base possibili.</li>
+</ul>
+<p>Per utilizzare la suite aircrack-ng potete usare qualunque distribuzione gnu/linux come ubuntu, debian, fedora ecc. <strong>Io consiglio caldamente l’utilizzo della distribuzione <a title="Downloads" href="http://www.backtrack-linux.org/downloads/">backtrack 5</a></strong> in quanto ha tutto quello che ci serve già installato.</p>
+<p>Potete installare backtrack 5 sul vostro computer o, più semplicemente, avviarlo in una macchina virtuale (come faccio io). I migliori software di virtualizzazione (per avviare backtrack senza bisogno di installarlo) sono:</p>
+<ul>
+<li><a title="Virtualization &amp; Automation Solutions for Desktops, Servers, Hosting, SaaS – Parallels Optimized Computing" href="http://www.parallels.com/">Parallels &#8211; A pagamento</a></li>
+<li><a title="VMware Italia: Software di virtualizzazione VMware per desktop, server e macchine virtuali per una soluzione di cloud pubblico e privato" href="http://www.vmware.com/it/">Vmware &#8211; A pagamento</a></li>
+<li><a title="VirtualBox" href="http://www.virtualbox.org/">VirtualBox &#8211; Gratis</a></li>
+</ul>
+<p>In questa guida non vi farò vedere come installare backtrack in uno di questi software perchè è una cosa molto semplice e si fa in 30 secondi. Se non sapete farlo chiedete a zio google!</p>
+<p>Se per qualche oscuro motivo decidete di non usare backtrack 5 potete installare la suite aircrack-ng dando qualcosa del genere nel vostro terminale:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;sudo apt-get install aircrack-ng</div></div>
+<p>Inoltre, sempre se non usate backtrack 5, ogni comando che troverete in questa guida dovrà essere dato con i privilegi di amministratore.</p>
+<p><strong>Per evitare tutti questi problemi usate backtrack e non pensateci più.</strong></p>
+<p>Dovete avere anche una scheda di rete correttamente funzionante in backtrack. Per sapere se la vostra scheda di rete è stata riconosciuta date nel terminale di backtrack:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;iwconfig</div></div>
+<p>Potete utilizzare la scheda di rete wireless del vostro computer, ma il consiglio mio è di acquistare la chiavetta wifi Alfa AWUS036H. Questa chiavetta wifi è stato progettata e costruita per il wardriving ed ha una potenza mostruosa. Potete acquistarla per circa 30€ su ebay o dove meglio credete <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+<h2 id="cose_da_fare_ed_un_po8217_di_teoria">Cose da fare ed un po’ di teoria</h2>
+<p>Prima di seguire il tutorial assicuratevi di aver ben chiaro ogni cosa che andremo a fare. Copiare e incollare i comandi non ha nessuna utilità e il rischio che voi vi blocchiate in qualche passaggio è molto alto. Al contrario se vi sforzate un minimo per capire il percorso che andremo a fare tutto sarà molto più semplice.<br/>
+Ecco i tre punti più importanti che andremo ad eseguire:</p>
+<ol>
+<li>Setup delle periferiche e delle interfacce di rete.</li>
+<li>Cattura dell’handshake.</li>
+<li>Crack della chiave mediante un dizionario.</li>
+</ol>
+<p>Il procedimento da seguire è abbastanza semplice.</p>
+<p>La prima cosa da fare è assicurarsi che la nostra interfaccia di rete wifi sia correttamente installata, altrimenti come facciamo a crackare una rete wifi?</p>
+<p>Ora per crackare una rete con cifratura WPA dobbiamo catturare un pacchetto che si chiama <strong>handshake</strong>, in italiano <em>stretta di mano</em>. Questo tipo di pacchetto viene scambiato tra l’AP (acess point) e i computer solo quando questi ultimi (i computer) accedono all’AP.<br/>
+In poche parole possiamo cattuare un handshake solo quando, in tempo reale, un client si collega all’AP vittima.</p>
+<p>Per fare ciò, se un client è già collegato all’AP, possiamo fargli credere di non essere autenticato e lo possiamo forzare a scambiare un handshake con l’AP.</p>
+<p>Quindi per catturare un handshake, e crackare una password WPA, dobbiamo o deautenticare un client collegato all’AP oppure sperare che, mentre siamo in ascolto, qualche client si colleghi spontaneamente.</p>
+<p>In conclusione penso sia chiaro che se non c’è alcun client collegato, e nessuno si collega ad esso mentre siamo in ascolto, non è possibile catturare l’handshake e quindi crackare la chiave.</p>
+<p>Se riusciamo a catturare un handshake possiamo procedere al cracking della chiave WPA.</p>
+<p>Le chiavi di rete con cifratura WPA sono vulnerabili solo ad un attacco di tipo dizionario.</p>
+<p><strong>Ma cosa significa e come avviene un attacco di tipo dizionario?</strong></p>
+<p>Immaginiamo di avere un grandissimo file di testo (.txt) con dentro migliaia di righe. In ogni riga c’è una parola, un numero o una combinazione tra numeri e parole. In poche parole in ogni riga di questo documento di testo abbiamo una possibile password.</p>
+<p>Una volta catturato l’handshake possiamo far provare al software ogni password contenuta in questo documento in maniera del tutto automatica. Questo tipo di attacco è chiamato burte force, forza bruta.</p>
+<p><strong>Ma come agisce il software durante un attacco brute force?</strong></p>
+<p>Il software agisce in questo modo:</p>
+<ul>
+<li>Prende la prima password contenuta nel nostro file dizionario</li>
+<li>Tenta l’autenticazione mediante la prima password selezionata</li>
+<li>A questo punto se la password è quella giusta ve lo notificherà. Se la password è sbagliata la scarta, e prosegue con la seconda password</li>
+</ul>
+<p>Ovviamente questo ciclo continua fino a quando non vengono provate tutte le password del dizionario o fino a quando la password non viene trovata.</p>
+<p>Il processo è molto veloce, il mio macbook pro con processore intel i5 a 2,3 GhZ riesce a provare circa 2000 (DUEMILA) password al secondo.</p>
+<p>Penso che abbiate capito che la password viene trovata SOLO se è contenuta nel vostro dizionario. A differenza delle password con cifratura WEP non sempre una password con cifratura WPA viene trovata.</p>
+<p>Anzi, è più facile che la password non sia contenuta nel vostro dizionario e quindi che non venga trovata.</p>
+<p>E’ chiaro che se la password della rete è un nome di persona, cosa, animale, città o comunque è una parola comune è probabile che sia contenuta in un file dizionario e che quindi venga trovata.<br/>
+Se la password è una password sicura composta da almeno 10 caratteri casuali (tra numeri, lettere maiuscole e minuscole e simboli di punteggiatura) è praticamente impossibile da trovare.<br/>
+Se anche fosse composta solo da lettere minuscole dell’alfabeto italiano ci sarabbero 37822859361 combinazioni possibili. E se si provassero tutte le combinazioni possibili con un computer abbastanza potente <strong>per avere la certezza di trovare la password ci vorrebbero 219 giorni</strong> di bruteforcing continuo!!!!</p>
+<p>Se aggiungiamo anche solo i numeri per avere la certezza di trovare la password ci vorrebbero 13 anni! Se poi aggiungiamo anche punteggiatura, caratteri speciali e lettere maiuscole e minuscole per avere la certezza di trovare la password ci vorrebbero MILIARDI di anni.</p>
+<p>Spero che sia chiaro che se la password è una password casuale decente non è possibile in nessun modo ricavarla.</p>
+<p>Se invece, come spesso accade, la password è composta dal nome di una persona, nome, animale ecc. è facile che venga trovata con un attacco a forza bruta.</p>
+<p><strong>Ma come si fa o dove trovo un dizionario per un attacco a forza bruta?</strong></p>
+<p>Siccome voi state facendo un test sulla vostra rete, e sapete la vostra password, potete costruire il vostro file dizionario in maniera molto semplice.<br/>
+Aprite un editor di testo (blocco notes su windows, texedit su mac o gedit su linux) e scrivete ad ogni riga una password diversa. Ovviamente mettete anche la password della vostra rete tra queste. Poi salvate il file col nome che volete(come estensione va bene <strong>.txt</strong> e <strong>.lst</strong>).<br/>
+Se invece volete scaricare un dizionario pronto basta fare una ricerca su google, o scaricare <a title="Downloads | Mauro's Page" href="../../../../indexd86a.html?page_id=395&amp;did=11">questo</a> archivio preparato da me dove dentro troverete 3 dizionari italiani. Ovviamente se la vostra password non è contenuta nel dizionario aggiungetela voi!</p>
+<p>Ora che la teoria è più chiara (spero), possiamo passare alla pratica!</p>
+<h2 id="setup_delle_periferiche_e_delle_interfacce_di_rete">Setup delle periferiche e delle interfacce di rete</h2>
+<p>La prima cosa da fare, ovviamente, è avviare la nostra macchina virtuale e far partire la distribuzione linux scelta per eseguire il test.</p>
+<p>Io eseguirò il test con parallels, la chiavetta ALFA AWUS036H e backtrack 5. Consiglio sempre l’utilizzo di backtrack 5 in quanto esso ha già installato la suite aircrack-ng e ha i driver già patchati per la maggiorparte delle chiavette wifi nate per il wardriving.</p>
+<p>Aprite il terminale e date il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;iwconfig</div></div>
+<p>Il sistema vi risponderà mostrandovi le interfacce di rete WIFI disponibili. Se non c’è almeno una interfaccia <em>senza</em> la scritta <em>no wireless extension</em> significa che la vostra interfaccia di rete o non è collegata o non è stata riconosciuta perchè mancano i driver.</p>
+<p>Se utilizzate la chiavetta che uso io, e che vi consiglio di comprare, questa sarà subito mostrata e sarete pronti a proseguire. Se invece volete utilzzare una scheda di rete differente dovreste, probabilmente, installare i driver relativi ad essa. Per farlo vi rimando a <a title="compatibility_drivers    [Aircrack-ng]" href="http://www.aircrack-ng.org/doku.php?id=compatibility_drivers&amp;DokuWiki=bffedde49c684d37c46f7c6eb5f86b9b">questo</a> tutorial ufficiale.</p>
+<p>Ora date il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng</div></div>
+<p>E il sistema vi risponderà qualcosa del genere:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng<br/>
+<br/>
+Interface Chipset Driver<br/>
+<br/>
+wlan0 Realtek RTL8187L rtl8187 - [phy0]</div></div>
+<p>Come potete notare il sistema ha riconosciuto la mia chiavetta e l’ha “chiamata” wlan0. <strong>D’ora in avanti, in tutto il codice che scriverò, al posto di wlan0 dovrete sostituire il nome della vostra interfaccia</strong> che, per forza di cose, POTREBBE chiamarsi in modo diverso.</p>
+<p>Per fare in modo che la nostra chiavetta wifi possa cercare le reti wifi in zona dobbiamo metterla in <em>monitor mode</em>.</p>
+<p>Per mettere la nostra chiavetta in <em>monitor mode</em> basta dare il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng start wlan0</div></div>
+<p>Il sistema vi risponderà:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng start wlan0<br/>
+<br/>
+Found 2 processes that could cause trouble.<br/>
+If airodump-ng, aireplay-ng or airtun-ng stops working after<br/>
+a short period of time, you may want to kill (some of) them!<br/>
+<br/>
+PID Name<br/>
+1428 dhclient3<br/>
+1924 dhclient3<br/>
+Process with PID 1924 (dhclient3) is running on interface wlan0<br/>
+<br/>
+Interface Chipset Driver<br/>
+<br/>
+wlan0 Realtek RTL8187L rtl8187 - [phy0]<br/>
+(monitor mode enabled on mon0)</div></div>
+<p>Il computer creerà ora una nuova interfaccia virtuale, a partire da wlan0, e la metterà in monitor mode. Trovate il nome della vostra nuova interfaccia nella stringa di risposta:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;(monitor mode enabled on mon0)</div></div>
+<p>Potete vedere che nel mio caso si chiama <strong>mon0</strong>. <strong>D’ora in avanti, in tutto il codice, dove vedrete mon0 dovrete mettere il nome della vostra interfaccia virtuale</strong>.</p>
+<p>Possiamo ora eseguire una prima scansione delle reti per trovare la rete bersaglio che andremo a crackare. Date il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airodump-ng —encrypt wpa mon0</div></div>
+<ul>
+<li><strong>airodump-ng</strong> è semplicemente il nome dello script</li>
+<li><strong>—encrypt wpa</strong> è un filtro per cercare solo le reti con cifratura wpa</li>
+<li><strong>mon0</strong> è il nome della nostra interfaccia virtuale</li>
+</ul>
+<p>Il terminale a questo punto vi mostrerà una schermata SIMILE a questa:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;CH  7 ][ Elapsed: 40 s ][ 2011-06-06 11:53<br/>
+<br/>
+BSSID---------------PWR----Beacons--#Data- #/s-CH--MB---ENC--CIPHER-AUTH-ESSID<br/>
+<br/>
+XX:XX:XX:XX:XX:XX ---32------63------- 2-----0 - 4--54e--WPA2-CCMP---PSK--Rete bersaglio<br/>
+XX:XX:XX:XX:XX:XX ---63------ 5------- 2-----0 - 1--54 --WPA -TKIP---PSK--Altra rete<br/>
+XX:XX:XX:XX:XX:XX ---66------ 6------- 0-----0 - 1--54 --WPA -TKIP---PSK--Altra rete<br/>
+XX:XX:XX:XX:XX:XX ---70------ 4------- 0-----0 -11--54 --WPA -CCMP---PSK--Altra rete<br/>
+XX:XX:XX:XX:XX:XX ---72------ 4------- 0-----0 - 6--54 --WPA -TKIP---PSK--Altra rete<br/>
+<br/>
+BSSID              STATION            PWR   Rate    Lost  Packets  Probes<br/>
+<br/>
+00:1C:A2:EF:00:49  00:23:4D:2B:88:07  -66    0 - 1      0        2</div></div>
+<p>Aspettate qualche secondo fino a quando non vedrete la vostra rete e poi, per fermare la scansione, premente CTRL + C.</p>
+<p><strong>Prendete nota del BSSID</strong>, che sarebbe il MAC Adress dell’Access Point (AP da ora in avanti) vittima e del canale sotto cui opera (lo trovate sotto la colonna CH).</p>
+<p>Ora che sappiamo il canale su cui opera il nostro AP vittima, <strong>ad esempio il canale 4</strong>, dobbiamo distruggere l’interfaccia virtuale prima creata (<strong>mon0</strong> nel nostro caso) e ricrearla specificando su che canale impostare la monitor mode.</p>
+<p>Questo è un passaggio che molti sottovalutano ma che è di grande importanza. Se mettiamo la nostra chiavetta in monitor mode senza specificare il canale avremo una ricezione non stabile che, spessissimo, è causa del mancato cracking di una chiave wep.</p>
+<p>Distruggiamo l’interfaccia virtuale con il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng stop mon0</div></div>
+<p>Il sistema vi risponderà con qualcosa di simile:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng stop wlan0<br/>
+<br/>
+Interface Chipset Driver<br/>
+<br/>
+wlan0 Realtek RTL8187L rtl8187 - [phy2]<br/>
+(monitor mode disabled)<br/>
+mon0 Realtek RTL8187L rtl8187 - [phy2]</div></div>
+<p>A questo punto non ci resta che rimettere in monitor mode wlan0 specificando questa volta il canale che ci serve (in questo esempio 4):</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng start wlan0 4</div></div>
+<p>Notate il quattro (4) alla fine della stringa che indica il canale su cui operare.</p>
+<p>Il sistema vi notificherà il tutto con qualcosa di simile:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airmon-ng start wlan0 4<br/>
+<br/>
+Found 2 processes that could cause trouble.<br/>
+If airodump-ng, aireplay-ng or airtun-ng stops working after<br/>
+a short period of time, you may want to kill (some of) them!<br/>
+<br/>
+PID Name<br/>
+1428 dhclient3<br/>
+1924 dhclient3<br/>
+Process with PID 1924 (dhclient3) is running on interface wlan0<br/>
+<br/>
+Interface Chipset Driver<br/>
+<br/>
+wlan0 Realtek RTL8187L rtl8187 - [phy0]SIOCSIFFLAGS: Unknown error 132<br/>
+<br/>
+(monitor mode enabled on mon0)</div></div>
+<p>A questo punto la nostra interfaccia di rete(mon0) è quasi pronta.</p>
+<p>Per una maggiore sicurezza è preferibile cambiare il <a title="Indirizzo MAC - Wikipedia" href="http://it.wikipedia.org/wiki/Indirizzo_MAC">MAC adress</a> della propria scheda con uno fittizio. Siccome stiamo cercando di violare il NOSTRO AP non abbiamo bisogno di questo comando. Ma a scopo didattico vi illustrerò il suo funzionamento.</p>
+<p>Per cambiare il MAC adress della nostra scheda dovremo:</p>
+<ol>
+<li>Stoppare la nostra interfaccia</li>
+<li>Cambiare il mac adress usando macchanger</li>
+<li>Riattivare l’interfaccia</li>
+</ol>
+<p>Per stoppare l’interfaccia basta dare nel terminale il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;ifconfig mon0 down</div></div>
+<p>Per il cambiare il MAC adress basta dare il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;macchanger -a mon0</div></div>
+<ul>
+<li><strong>macchanger</strong> è il nome dello script che cambia il mac adress</li>
+<li><strong>-a</strong> significa assegna un mac adress casuale</li>
+<li><strong>mon0</strong> è il nome della scheda a cui vogliamo cambiare l’indirizzo mac</li>
+</ul>
+<p>Infine per riattivare l’interfaccia precedentemente sospesa usiamo il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;ifconfig mon0 up</div></div>
+<p>A questo punto finalmente abbiamo completato la preparazione: abbiamo l’interfaccia virtuale in monitor mode e sul canale corretto e abbiamo cambiato il suo mac adress per sicurezza.</p>
+<h2 id="cattura_dell8217handshake">Cattura dell’handshake</h2>
+<p>Possiamo finalmente tentare la cattura dell’handshake. La prima cosa da fare è, ovviamente, avviare airodump e salvare tutto quello che cattura in un file.</p>
+<p>Diamo nel terminale il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;airodump-ng —bssid XX:XX:XX:XX:XX:XX -c 4 -w test-mauromarano.it mon0</div></div>
+<ul>
+<li><strong>airodump-ng</strong> è il nome dello script per catturare e salvare i pacchetti</li>
+<li><strong>-bssid</strong> serve per scansionare solo la rete che serve a noi. Dobbiamo mettere subito dopo -bssid il bssid (mac adress) dell’AP vittima. Quello che avete segnato prima.</li>
+<li><strong>-c</strong> serve per specificare il canale su cui fare la ricerca.</li>
+<li><strong>-w</strong> serve per salvare tutti i dati in un file chiamato con il nome che segue a questa istruzione. Nel nostro caso il file si chiamerà test.mauromarano.it</li>
+<li><strong>mon0</strong> come sempre indica l’interfaccia da utilizzare</li>
+</ul>
+<p>Aspettate ora qualche secondo e controllate se sotto, dove c’è scritto “STATION”, compare qualcosa.</p>
+<p>Per catturare un’handshake, e trovare quindi la password della rete, abbiamo bisogno che qualche computer (client) sia collegato alla rete. <strong>Se nessun client è collegato alla rete non è possibile violare la rete</strong>.</p>
+<p>Se qualche client è collegato alla rete bersaglio verrà mostrato in airodump nella parte inferiore:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;BSSID STATION PWR Rate Lost Packets Probes<br/>
+<br/>
+54:E6:FC:99:DE:72 E4:CE:8F:0B:39:62 -1 11e- 0 0 730</div></div>
+<p>Come vedete nella colonna <strong>STATION</strong> viene mostrato il MAC adress di un client collegato all’access point che ha come MAC adress quello che c’è scritto sotto la colonna <strong>BSSID</strong>.</p>
+<p>Se Il client è collegato all’AP bersaglio (basta controllare il mac adress sotto la colonna <strong>BSSID</strong>) possiamo procedere. Altrimenti dobbiamo aspettare che qualche client si colleghi.</p>
+<p>Ora che siamo in ascolto se qualche client si collega dovremmo catturare automaticamente l’handshake.</p>
+<p>Se riuscite a catturare un’handshake vi verrà mostrato nella parte superiore destra di airodump in un formato simile a questo:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;[ WPA handshake: 68:7f:74:44:44:6c ]</div></div>
+<p>A questo punto potete anche bloccare la cattura dei pacchetti premendo <strong>CTRL</strong> + <strong>C</strong></p>
+<p>Non è facile però beccare il momento esatto in cui un client si collega all’AP vittima.</p>
+<p>Quindi noi deutenticheremo un client collegato per forzarlo a ri autenticarsi per riuscire a catturare l’handhsake.</p>
+<p>Per far ciò basta usare il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;aireplay-ng —deauth 1 -a XX:XX:XX:XX:XX -c YY:YY:YY:YY:YY:YY mon0</div></div>
+<ul>
+<li><strong>aireplay-ng</strong> è il programma che esegue l’attacco.</li>
+<li><strong>—deauth</strong> è il tipo di attacco.</li>
+<li><strong>1</strong> è un parametro di impostazione (lasciatelo cosi).</li>
+<li><strong>-a</strong> serve per specificare l’AP vittima, dovete mettere quind il bssid dell’AP vittima.</li>
+<li><strong>-c</strong> serve per specificare il mac adress del client che vogliamo deutenticare.</li>
+<li><strong>mon0</strong> è il nome dell&#8217;interfaccia virtuale</li>
+</ul>
+<p>Non sempre al primo colpo si riesce a deutenticare il client e a catturare l’handshake.</p>
+<p>Se non ci riuscite al primo colpo rilanciate di nuovo lo stesso comando fino a quando non ci riuscite.</p>
+<p>Una volta catturato l’handhsake potete anche bloccare la cattura dei pacchetti premendo <strong>CTRL</strong> + <strong>C</strong> e preseguire con lo step successivo.</p>
+<h2 id="crack_della_chiave_mediante_un_dizionario">Crack della chiave mediante un dizionario</h2>
+<p>Ora, finalmente direte voi, possiamo passare alla fase di cracking vera e propria.</p>
+<p>Se avete letto tutto l’articolo, cosa spero che abbiate fatto, ora avrete anche il vostro dizionario bello e pronto.</p>
+<p>Se vi siete persi questa fase andate sopra e rileggetevi tutto facendo attenzione alla parte <strong>Cose da fare ed un po’ di teoria</strong>.</p>
+<p>Nel nostro caso abbiamo salvato i pacchetti, e quindi l’handshake, in un file chiamato <strong>test.mauromarano.it</strong>. Airodump però aggiunge automaticamente un suffisso finale del tipo test.mauromarano.it-<strong>01.cap</strong> dove <strong>.cap</strong> è ovviamente l’estensione del file mentre <strong>01</strong> indica il numero di file.</p>
+<p>Se avete fatto esattamente come nella guida dovreste avere ora questo file .cap nella root della vostra home. Prima di andare avanti assicuratevi di conoscere bene in che posizione sono collocati i file .cap e il nostro dizionario.</p>
+<p>Apriamo ora il terminale (o usiamo la finestra rimasta aperta da prima) e diamo il comando:</p>
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp;aircrack-ng test.mauromarano.it-01.cap -w wordlist.txt</div></div>
+<p>Come vedete, anche i n questo caso, la sintassi da utilizzare è estremamente banale.</p>
+<ul>
+<li><strong>aircrack-ng</strong> è, ovviamente, il comando per utilizzare aircrack</li>
+<li><strong>test.mauromarano.it-01.cap</strong> è il file che contiene il nostro handshake. Da notare che nel mio caso il file è nella root della mia home. Se fosse stato, ad esempio, sul desktop avreste dovuto indicare il percorso completo al file come /Desktop/test.mauromarano.it-01.cap</li>
+<li><strong>-w</strong> serve per indicare il dizionario da usare. Subito dopo -w va inserito il nome del nostro file dizionario. Anche in questo caso, va inserito il percorso completo al file.</li>
+</ul>
+<p>Premendo invio aircrack inizierà l’attacco dizionario e proverà, come spiegato nella sezione<br/>
+<strong>Cose da fare ed un po’ di teoria</strong>, tutte le password contenute nel file dizionario.</p>
+<p>Se la password della rete WPA è contenuta nel dizionario vi verrà mostrata <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+<h1 id="domande_e_risposte">Domande e risposte</h1>
+<p><strong>Esiste un modo per crackare una rete wifi protetta da password WPA senza catturare l’handshake?</strong></p>
+<p><em>No, non esiste al mondo altro modo.</em></p>
+<p><strong>Esiste un modo per crackare una rete wifi protetta da password WPA senza utilizzare un attacco dizionario?</strong></p>
+<p><em>si e no. Nel senso che si potrebbe utilizzare un generatore di stringhe casuali (come Jtr) e provare ogni stringa.Ma vista la mole di caratteri e le combinazioni possibili, come spiegato all’inizio della guida, non è concretamente possibile. L’unico modo fattibile è utilizzare un dizionario contentente password comuni.</em></p>
+<p><strong>E’ possibile crackare la password se essa non è contenuta del dizionario?</strong></p>
+<p><em>Assolutamente no.</em></p>
+<p><strong>E’ possibile crackare qualunque password utilizzando questa guida e questo metodo?</strong></p>
+<p><em>Assolutamente no. Come ampiamente spiegato la password può essere trovata solo se è una password di uso comune e se è contenuta in un dizionario. Se questo non vi è chiaro leggete tutta la guida d’accapo con più attenzione.</em></p>
+<p><strong>E’ possibile crackare una password lunga e composta da caratteri casuali?</strong></p>
+<p><em>Come spiegato nella guida teoricamente è possibile, ma concretamente NO. Quindi la risposta è NO.</em></p>
+<p><strong>Come posso proteggere la mia rete wifi impedendo che qualcuno possa violarla?</strong></p>
+<p><em>Dovete SEMPRE cambiare le password di default dei vostri modem/router e sostituirle con delle password sicure. Per password sicure intendo una password di almeno 10 caratteri casuali composta da lettere maiuscole e minuscole, numeri e simboli.</em></p>
+<p><strong>Se imposto una password sicura come spiegato in questo articolo posso stare sicuro?</strong></p>
+<p><em>Assolutamente si. Non c’è un modo concreto per crackare una password sicura. Nemmeno 100 computer della nasa potrebbero crackare la vostra rete prima che giunga la fine del mondo.</em></p>
+<p><strong>Devo assolutamente evitare di usare la protezione WEP?</strong></p>
+<p><em>Proteggere la vostra rete con una password WEP equivale a lasciarla senza protezione.</em></p>
+</section>  
+<footer>
+<p class="tags"><span class="tags-title">Tags:</span> <a href="../../../../tag/aircrack/index.html" rel="tag">aircrack</a> <a href="../../../../tag/aircrack-mac/index.html" rel="tag">aircrack mac</a> <a href="../../../../tag/alternativa-kismac/index.html" rel="tag">alternativa kismac</a> <a href="../../../../tag/backtrack/index.html" rel="tag">backtrack</a> <a href="../../../../tag/backtrack-5/index.html" rel="tag">backtrack 5</a> <a href="../../../../tag/chiave-di-rete/index.html" rel="tag">chiave di rete</a> <a href="../../../../tag/come-crackare-una-password-wpa/index.html" rel="tag">come crackare una password wpa</a> <a href="../../../../tag/come-crackare-una-rete-wifi/index.html" rel="tag">come crackare una rete wifi</a> <a href="../../../../tag/crack/index.html" rel="tag">crack</a> <a href="../../../../tag/crackare-aircrack/index.html" rel="tag">crackare aircrack</a> <a href="../../../../tag/crackare-password/index.html" rel="tag">crackare password</a> <a href="../../../../tag/crackare-rete-wifi/index.html" rel="tag">crackare rete wifi</a> <a href="../../../../tag/cracking/index.html" rel="tag">cracking</a> <a href="../../../../tag/guida/index.html" rel="tag">guida</a> <a href="../../../../tag/guida-aircrack/index.html" rel="tag">guida aircrack</a> <a href="../../../../tag/guida-aircrack-crack-rete-wifi/index.html" rel="tag">guida aircrack crack rete wifi</a> <a href="../../../../tag/guida-aircrack-ita/index.html" rel="tag">guida aircrack ita</a> <a href="../../../../tag/guida-aircrack-italiano/index.html" rel="tag">guida aircrack italiano</a> <a href="../../../../tag/guida-aircrack-ng/index.html" rel="tag">guida aircrack-ng</a> <a href="../../../../tag/guida-ita/index.html" rel="tag">guida ita</a> <a href="../../../../tag/ita/index.html" rel="tag">ita</a> <a href="../../../../tag/italiano/index.html" rel="tag">italiano</a> <a href="../../../../tag/kismac/index.html" rel="tag">kismac</a> <a href="../../../../tag/kismac-mac/index.html" rel="tag">kismac mac</a> <a href="../../../../tag/kismac-vs-aircrack/index.html" rel="tag">kismac vs aircrack</a> <a href="../../../../tag/kismet/index.html" rel="tag">kismet</a> <a href="../../../../tag/kismet-mac/index.html" rel="tag">kismet mac</a> <a href="../../../../tag/linux/index.html" rel="tag">Linux</a> <a href="../../../../tag/mac/index.html" rel="tag">mac</a> <a href="../../../../tag/password/index.html" rel="tag">password</a> <a href="../../../../tag/recuperare-password-wifi/index.html" rel="tag">recuperare password wifi</a> <a href="../../../../tag/recuperare-password-wpa/index.html" rel="tag">recuperare password wpa</a> <a href="../../../../tag/recupero/index.html" rel="tag">recupero</a> <a href="../../../../tag/ritrovare/index.html" rel="tag">ritrovare</a> <a href="../../../../tag/tutorial/index.html" rel="tag">Tutorial</a> <a href="../../../../tag/tutorial-aircrack/index.html" rel="tag">tutorial aircrack</a> <a href="../../../../tag/tutorial-aircrack-backtrack/index.html" rel="tag">tutorial aircrack backtrack</a> <a href="../../../../tag/tutorial-aircrack-ita/index.html" rel="tag">tutorial aircrack ita</a> <a href="../../../../tag/tutorial-aircrack-italiano/index.html" rel="tag">tutorial aircrack italiano</a> <a href="../../../../tag/tutorial-aircrack-password-wpa/index.html" rel="tag">tutorial aircrack password wpa</a> <a href="../../../../tag/tutorial-aircrack-password-wpa-ita/index.html" rel="tag">tutorial aircrack password wpa ita</a> <a href="../../../../tag/tutorial-aircrack-ng/index.html" rel="tag">tutorial aircrack-ng</a> <a href="../../../../tag/tutorial-crack-rete-wifi/index.html" rel="tag">tutorial crack rete wifi</a> <a href="../../../../tag/tutorial-crack-rete-wpa/index.html" rel="tag">tutorial crack rete wpa</a> <a href="../../../../tag/tutorial-crackare-rete-wifi/index.html" rel="tag">tutorial crackare rete wifi</a> <a href="../../../../tag/tutorial-crackare-wifi/index.html" rel="tag">tutorial crackare wifi</a> <a href="../../../../tag/tutorial-ita/index.html" rel="tag">tutorial ita</a> <a href="../../../../tag/tutorial-rete-wpa/index.html" rel="tag">tutorial rete wpa</a> <a href="../../../../tag/video-guida/index.html" rel="tag">video guida</a> <a href="../../../../tag/video-tutorial-hd-alta-definizione-alta-qualita-qualita-velcemente-mauromarnao-it/index.html" rel="tag">video tutorial hd alta definizione alta qualità qualità velcemente mauromarnao.it</a> <a href="../../../../tag/wifi/index.html" rel="tag">wifi</a> <a href="../../../../tag/windows/index.html" rel="tag">windows</a> <a href="../../../../tag/wpa/index.html" rel="tag">wpa</a> <a href="../../../../tag/video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wpa-con-aircrack-ng-su-backtrack-5/index.html" rel="tag">[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione wpa con AirCrack-ng su backtrack 5</a></p>
+</footer>  
+</article>  
+<div id="disqus_thread">
+<div id="dsq-content">
+<ul id="dsq-comments">
+<li class="comment byuser comment-author-angelo even thread-even depth-1" id="dsq-comment-1857">
+<div id="dsq-comment-header-1857" class="dsq-comment-header">
+<cite id="dsq-cite-1857">
+<span id="dsq-author-user-1857">Angelo</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1857" class="dsq-comment-body">
+<div id="dsq-comment-message-1857" class="dsq-comment-message"><p>Davvero un gran bel lavoro! <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> L&#8217;unica cosa che non ho bel capito è quando spieghi questo: &#8220;Come vedete nella colonna STATION viene mostrato il MAC adress di un client collegato all’access point che ha come MAC adress quello che c’è scritto sotto la colonna BSSID.<br/>
+Se Il client è collegato all’AP bersaglio (basta controllare il mac adress sotto la colonna BSSID) possiamo procedere&#8221;. Complimenti davvero, Mauro! <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor odd alt thread-odd thread-alt depth-1" id="dsq-comment-1858">
+<div id="dsq-comment-header-1858" class="dsq-comment-header">
+<cite id="dsq-cite-1858">
+http://mauromarano.it <span id="dsq-author-user-1858">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1858" class="dsq-comment-body">
+<div id="dsq-comment-message-1858" class="dsq-comment-message"><p>Si, il problema è che in quei box dove ho riportato il codice si è sfalsata la formattazione delle tabelle <img src='../../../../wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1859">
+<div id="dsq-comment-header-1859" class="dsq-comment-header">
+<cite id="dsq-cite-1859">
+<span id="dsq-author-user-1859">Math</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1859" class="dsq-comment-body">
+<div id="dsq-comment-message-1859" class="dsq-comment-message"><p>Bella guida! Sarebbe bello che preparassi qualcosa su John The Ripper: mentre per il crack wep e wpa bene o male in rete qualcosa si trovava già, anche se non così curato, un articolo dettagliato sulle molteplici capacità di John the Ripper è già più difficile reperirlo e sarebbe quasi una primizia!</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-2" id="dsq-comment-1860">
+<div id="dsq-comment-header-1860" class="dsq-comment-header">
+<cite id="dsq-cite-1860">
+http://mauromarano.it <span id="dsq-author-user-1860">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1860" class="dsq-comment-body">
+<div id="dsq-comment-message-1860" class="dsq-comment-message"><p>@Math grazie per lo spunto, ci faccio un pensierino <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1861">
+<div id="dsq-comment-header-1861" class="dsq-comment-header">
+<cite id="dsq-cite-1861">
+<span id="dsq-author-user-1861">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1861" class="dsq-comment-body">
+<div id="dsq-comment-message-1861" class="dsq-comment-message"><p>Math volevo scrivere lo stesso commento, sul wep/wpa si trova molta informazione, invece su Jtr e piu difficile trovare qualcosa. Io ci ho passato quasi una settimana a cercare informazioni utili su di esso ma senza successo.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-2" id="dsq-comment-1862">
+<div id="dsq-comment-header-1862" class="dsq-comment-header">
+<cite id="dsq-cite-1862">
+http://mauromarano.it <span id="dsq-author-user-1862">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1862" class="dsq-comment-body">
+<div id="dsq-comment-message-1862" class="dsq-comment-message"><p>Marco cosa ti interesserebbe a proposito di jtr?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-3" id="dsq-comment-1863">
+<div id="dsq-comment-header-1863" class="dsq-comment-header">
+<cite id="dsq-cite-1863">
+<span id="dsq-author-user-1863">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1863" class="dsq-comment-body">
+<div id="dsq-comment-message-1863" class="dsq-comment-message"><p>In generale a cosa serve,come si usa..cultura generale.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-4" id="dsq-comment-1866">
+<div id="dsq-comment-header-1866" class="dsq-comment-header">
+<cite id="dsq-cite-1866">
+http://mauromarano.it <span id="dsq-author-user-1866">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1866" class="dsq-comment-body">
+<div id="dsq-comment-message-1866" class="dsq-comment-message"><p>Ok, allora mi metto a fare qualcosa per te <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> </p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-5" id="dsq-comment-1869">
+<div id="dsq-comment-header-1869" class="dsq-comment-header">
+<cite id="dsq-cite-1869">
+<span id="dsq-author-user-1869">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1869" class="dsq-comment-body">
+<div id="dsq-comment-message-1869" class="dsq-comment-message"><p>Grazie mille, sei uno dei pochi che fa guide in italiano per gente come noi che non sa l&#8217;inglese <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1864">
+<div id="dsq-comment-header-1864" class="dsq-comment-header">
+<cite id="dsq-cite-1864">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="95e7fae6e6fcaca7a1a3d5f9fce3f0bbfce1">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1864">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1864" class="dsq-comment-body">
+<div id="dsq-comment-message-1864" class="dsq-comment-message"><p>ciao complimenti bella pagina&#8230;&#8230; cmq quando inserisco il comando airodump-ng —bssid XX:XX:XX:XX:XX:XX -c 4 -w test-mauromarano.it mon0 mi dice &#8221; airodump-ng &#8211;help&#8221; io uso ubuntu 11.04 premetto k nn ho copiato nulla ho fatto tutto scrivendo. grazie in anticipo risp al piu prsto grz .. <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1865">
+<div id="dsq-comment-header-1865" class="dsq-comment-header">
+<cite id="dsq-cite-1865">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="9ceef3efeff5a5aea8aadcf0f5eaf9b2f5e8">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1865">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1865" class="dsq-comment-body">
+<div id="dsq-comment-message-1865" class="dsq-comment-message"><p>ehi ciao niente finalmente ho risolto ..grazie allla tua guida!!!!! spettacolare complimenti ciao <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-2" id="dsq-comment-1867">
+<div id="dsq-comment-header-1867" class="dsq-comment-header">
+<cite id="dsq-cite-1867">
+http://mauromarano.it <span id="dsq-author-user-1867">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1867" class="dsq-comment-body">
+<div id="dsq-comment-message-1867" class="dsq-comment-message"><p>Bene bene</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1868">
+<div id="dsq-comment-header-1868" class="dsq-comment-header">
+<cite id="dsq-cite-1868">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="acdec3dfdfc5959e989aecc0c5dac982c5d8">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1868">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1868" class="dsq-comment-body">
+<div id="dsq-comment-message-1868" class="dsq-comment-message"><p>anzi no scusa xD HO ancora un problema quando trovo Se qualche client è collegato alla rete bersaglio verrà mostrato in airodump nella parte inferiore:</p>
+<p>BSSID STATION PWR Rate Lost Packets Probes</p>
+<p>54:E6:FC:99:DE:72 E4:CE:8F:0B:39:62 -1 11e- 0 0 730 fin qua ok pero quando provo a farlo disconnettere e riconnetere mi dice &#8220;no replay interface specified &#8221; ke devo fare ???&#8217; grazie in anticipo <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-2" id="dsq-comment-1871">
+<div id="dsq-comment-header-1871" class="dsq-comment-header">
+<cite id="dsq-cite-1871">
+http://mauromarano.it <span id="dsq-author-user-1871">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1871" class="dsq-comment-body">
+<div id="dsq-comment-message-1871" class="dsq-comment-message"><p>Guarda aiutarti cosi è difficile, dipende dai passaggi precedenti che hai fatto.</p>
+<p>Sei sicuro di aver fatto tutto secondo la guida?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-3" id="dsq-comment-1872">
+<div id="dsq-comment-header-1872" class="dsq-comment-header">
+<cite id="dsq-cite-1872">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="c6b4a9b5b5affff4f2f086aaafb0a3e8afb2">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1872">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1872" class="dsq-comment-body">
+<div id="dsq-comment-message-1872" class="dsq-comment-message"><p>sisi ho fatto mille volte tutto secondo la guida&#8230; allora fino a quando sono in ascolta tutto ok ..poi pero ho provato a deutentificare e riautenticare il client e mi dice “no replay interface specified&#8221; <img src='../../../../wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley'/> io uso ubuntu 1104 ha cmq nn uso la chiavetta ..perche mi ha riconosciuto gia la scheda di rete k ho <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> ..e un po piu chiaro?? cmq grz</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-4" id="dsq-comment-1874">
+<div id="dsq-comment-header-1874" class="dsq-comment-header">
+<cite id="dsq-cite-1874">
+http://mauromarano.it <span id="dsq-author-user-1874">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1874" class="dsq-comment-body">
+<div id="dsq-comment-message-1874" class="dsq-comment-message"><p>Bè se non usi la chiavetta significa che evidentemente i driver della tua scheda wifi non permettono di deutenticare un client</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-5" id="dsq-comment-1875">
+<div id="dsq-comment-header-1875" class="dsq-comment-header">
+<cite id="dsq-cite-1875">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="27554854544e1e151311674b4e5142094e53">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1875">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1875" class="dsq-comment-body">
+<div id="dsq-comment-message-1875" class="dsq-comment-message"><p>no non penso sia quello il problema <img src='../../../../wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley'/> piuttosto penso k sano diversi i comandi per ubuntu .cmq i driver se te li riconosce all&#8217;inizio va bene nn c&#8217;entra vabbe grz cmq &#8230; <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1870">
+<div id="dsq-comment-header-1870" class="dsq-comment-header">
+<cite id="dsq-cite-1870">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="fd8f928e8e94c4cfc9cbbd91948b98d39489">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1870">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1870" class="dsq-comment-body">
+<div id="dsq-comment-message-1870" class="dsq-comment-message"><p>scusa hai capito se no te lo spiego meglio ??? ciao</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1876">
+<div id="dsq-comment-header-1876" class="dsq-comment-header">
+<cite id="dsq-cite-1876">
+http://mauromarano.it <span id="dsq-author-user-1876">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1876" class="dsq-comment-body">
+<div id="dsq-comment-message-1876" class="dsq-comment-message"><p>I comandi sono uguali su tutte le distro linux, i driver li può anche riconoscere all&#8217;inizio ma questo non significa che abbiano le stesse funzionalità di quelli di una chiavetta nata per il wardriving.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-3" id="dsq-comment-1877">
+<div id="dsq-comment-header-1877" class="dsq-comment-header">
+<cite id="dsq-cite-1877">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="4f3d203c3c26767d7b790f2326392a61263b">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1877">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1877" class="dsq-comment-body">
+<div id="dsq-comment-message-1877" class="dsq-comment-message"><p>si infatti ho trovato ora la guida hai driver compatibili xD cmq equindi se compro la chiavetta k dici tu nn dovrei avere problemi?? grz</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-4" id="dsq-comment-1878">
+<div id="dsq-comment-header-1878" class="dsq-comment-header">
+<cite id="dsq-cite-1878">
+http://mauromarano.it <span id="dsq-author-user-1878">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1878" class="dsq-comment-body">
+<div id="dsq-comment-message-1878" class="dsq-comment-message"><p>In teoria si, in pratica non è detto. Perchè ci sono alcuni access point che sono resistenti ad alcuni attacchi (come quello descritto in questa guida) e necessitano di procedimenti particolari (che cmq puoi trovare googlando)</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-5" id="dsq-comment-1879">
+<div id="dsq-comment-header-1879" class="dsq-comment-header">
+<cite id="dsq-cite-1879">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="0b796478786232393f3d4b67627d6e25627f">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1879">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1879" class="dsq-comment-body">
+<div id="dsq-comment-message-1879" class="dsq-comment-message"><p>allora k mi consigli??? ma scusa tu non lo sai k significa no replay interface specified” ??? scusa se sono cosi insistente ma proprio ora k ero cosi vicino <img src='../../../../wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley'/> grz x l&#8217;aiuto cmq&#8230;</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1873">
+<div id="dsq-comment-header-1873" class="dsq-comment-header">
+<cite id="dsq-cite-1873">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="8cfee3ffffe5b5beb8bacce0e5fae9a2e5f8">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1873">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1873" class="dsq-comment-body">
+<div id="dsq-comment-message-1873" class="dsq-comment-message"><p>ah cmq per ho un dubbio ma quando metto aireplay-ng —deauth 1 -a XX:XX:XX:XX:XX -c YY:YY:YY:YY:YY:YY in -c cosa devo mette?? devo mette quello ke scrive sotto station ??</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-2" id="dsq-comment-1880">
+<div id="dsq-comment-header-1880" class="dsq-comment-header">
+<cite id="dsq-cite-1880">
+http://mauromarano.it <span id="dsq-author-user-1880">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1880" class="dsq-comment-body">
+<div id="dsq-comment-message-1880" class="dsq-comment-message"><p>Certo che so che significa, in inglese significa &#8220;interfaccia non specificata&#8221;</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-3" id="dsq-comment-1881">
+<div id="dsq-comment-header-1881" class="dsq-comment-header">
+<cite id="dsq-cite-1881">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="9ae8f5e9e9f3a3a8aeacdaf6f3ecffb4f3ee">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1881">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1881" class="dsq-comment-body">
+<div id="dsq-comment-message-1881" class="dsq-comment-message"><p>be lo sapevo ankio -.- si vede k e sbagliato qualche comando ..perche ho visto su altri forum altri comandi &#8230;</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-4" id="dsq-comment-1882">
+<div id="dsq-comment-header-1882" class="dsq-comment-header">
+<cite id="dsq-cite-1882">
+http://mauromarano.it <span id="dsq-author-user-1882">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1882" class="dsq-comment-body">
+<div id="dsq-comment-message-1882" class="dsq-comment-message"><p>i comandi sono giustissimi. Il problema è il tuo</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-5" id="dsq-comment-1883">
+<div id="dsq-comment-header-1883" class="dsq-comment-header">
+<cite id="dsq-cite-1883">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="76041905051f4f444240361a1f0013581f02">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1883">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1883" class="dsq-comment-body">
+<div id="dsq-comment-message-1883" class="dsq-comment-message"><p>ma cosa dici se mi dice interfaccia non specificata il problema k manca qualche comando -.- !</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor odd alt thread-odd thread-alt depth-1" id="dsq-comment-1884">
+<div id="dsq-comment-header-1884" class="dsq-comment-header">
+<cite id="dsq-cite-1884">
+http://mauromarano.it <span id="dsq-author-user-1884">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1884" class="dsq-comment-body">
+<div id="dsq-comment-message-1884" class="dsq-comment-message"><p>Il problema è che ti ho già detto giorni fa che non puoi fare quello che stai facendo con una scheda di rete integrata.</p>
+<p>I comandi sono più che giusti, probabilmente se continui a sostenere questa tesi non hai ben capito come funziona il procedimento.</p>
+<p>Se trovi comandi che ti possono essere utili sentiti libero di seguirli, ma non venire a mettere in dubbio la veridicità di questi comandi a causa della tua incapacità.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-1885">
+<div id="dsq-comment-header-1885" class="dsq-comment-header">
+<cite id="dsq-cite-1885">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="4c3e233f3f25757e787a0c20253a29622538">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1885">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1885" class="dsq-comment-body">
+<div id="dsq-comment-message-1885" class="dsq-comment-message"><p>ma e inpossibile ho fatto tutto alla lettera ..ma scusa se mi dice intrfaccia nn specificata vuol dire k manca qualcosa ?? ho sbaglio scusa nn saro bravissimo col pc ma un po ne capisco ..cmq se compro la chiavetta nn devo utilizzare i mie wi fi giusto? grz <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> e scusa nn e k dubito anzi mi affido a te xke penso sia giusto pero penso k si mancassero i drver mi direbbe un&#8217;altra cosa .. o no??</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-3" id="dsq-comment-1886">
+<div id="dsq-comment-header-1886" class="dsq-comment-header">
+<cite id="dsq-cite-1886">
+http://mauromarano.it <span id="dsq-author-user-1886">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1886" class="dsq-comment-body">
+<div id="dsq-comment-message-1886" class="dsq-comment-message"><p>Per coretesia sforzati di scrivere in italiano, perchè già il tempo a mia disposizione è poco e non mi va di perdere altro tempo a tradurre strani testi in lingue sconosciute.</p>
+<p>Se leggi bene l&#8217;errore che ti da fa riferimento a &#8220;replay interface&#8221;. Perchè tu hai si una scheda di rete riconosciuta, ma non può far deutenticare il client e nemmeno eseguire altre operazioni perchè le sue funzionalità non sono supportate al 100%.</p>
+<p>per quanto riguarda la chiavetta ti ho già risposto sopra</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-4" id="dsq-comment-1887">
+<div id="dsq-comment-header-1887" class="dsq-comment-header">
+<cite id="dsq-cite-1887">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="2a584559594313181e1c6a46435c4f04435e">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1887">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1887" class="dsq-comment-body">
+<div id="dsq-comment-message-1887" class="dsq-comment-message"><p>ah ok ora sei stato chiaro <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> grz mille ciaoo</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1888">
+<div id="dsq-comment-header-1888" class="dsq-comment-header">
+<cite id="dsq-cite-1888">
+http://<a class="__cf_email__" href="http://www.cloudflare.com/email-protection" data-cfemail="9be9f4e8e8f2a2a9afaddbf7f2edfeb5f2ef">[email&nbsp;protected]</a><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l,b=document.getElementsByTagName("script");l=b[b.length-1].previousSibling;a=l.getAttribute('data-cfemail');if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script> <span id="dsq-author-user-1888">mike</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1888" class="dsq-comment-body">
+<div id="dsq-comment-message-1888" class="dsq-comment-message"><p>ehi ciao scusa sono andato al negozio ma mi hanno chiesto di k marca eh la chiavetta??&#8217; grz <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor even thread-odd thread-alt depth-1" id="dsq-comment-1889">
+<div id="dsq-comment-header-1889" class="dsq-comment-header">
+<cite id="dsq-cite-1889">
+http://mauromarano.it <span id="dsq-author-user-1889">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1889" class="dsq-comment-body">
+<div id="dsq-comment-message-1889" class="dsq-comment-message"><p>La chiavetta che uso io è la Alfa AWUS036H</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1890">
+<div id="dsq-comment-header-1890" class="dsq-comment-header">
+<cite id="dsq-cite-1890">
+http://www.nightlizard.org <span id="dsq-author-user-1890">NightLizard</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1890" class="dsq-comment-body">
+<div id="dsq-comment-message-1890" class="dsq-comment-message"><p>Ciao Mauro,<br/>
+innanzitutto complimenti per la guida, che trovo ben fatta.<br/>
+Ti pongo una domanda. Secondo te, se nessun client è collegato, è possibile bypassare il problema facendo prima una &#8211;fakeauth e, successivamente, provare un &#8211;deauth sul finto client?<br/>
+Ti ringrazio per la risposta che vorrai fornirmi.<br/>
+NightLizard</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1891">
+<div id="dsq-comment-header-1891" class="dsq-comment-header">
+<cite id="dsq-cite-1891">
+http://mauromarano.it <span id="dsq-author-user-1891">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1891" class="dsq-comment-body">
+<div id="dsq-comment-message-1891" class="dsq-comment-message"><p>Ciao, mi dispiace ma non è possibile fare ciò che dici.<br/>
+In quanto la deutenticazione server per forzare il client a reinviare l&#8217;handshake all&#8217;AP. Ma se il client è finto esso non reinvierà l&#8217;handshake all&#8217;AP <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1892">
+<div id="dsq-comment-header-1892" class="dsq-comment-header">
+<cite id="dsq-cite-1892">
+<span id="dsq-author-user-1892">Mirko</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1892" class="dsq-comment-body">
+<div id="dsq-comment-message-1892" class="dsq-comment-message"><p>Se vi dice &#8220;replay inteface&#8221; dovete mettere alla fine &#8220;mon0&#8243;. Non è detto che il problema è la scheda di rete.</p>
+<p>Nella guida c&#8217;è scritto &#8220;aireplay-ng —deauth 1 -a XX:XX:XX:XX:XX -c YY:YY:YY:YY:YY:YY&#8221;</p>
+<p>Alla fine scrivete &#8220;aireplay-ng —deauth 1 -a XX:XX:XX:XX:XX -c YY:YY:YY:YY:YY:YY mon0&#8243;</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1893">
+<div id="dsq-comment-header-1893" class="dsq-comment-header">
+<cite id="dsq-cite-1893">
+http://mauromarano.it <span id="dsq-author-user-1893">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1893" class="dsq-comment-body">
+<div id="dsq-comment-message-1893" class="dsq-comment-message"><p>Ops, hai ragione! Mi sono dimenticato di scrivere l&#8217;interfaccia!<br/>
+Grazie per la precisazione <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1894">
+<div id="dsq-comment-header-1894" class="dsq-comment-header">
+<cite id="dsq-cite-1894">
+<span id="dsq-author-user-1894">THEBICHO</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1894" class="dsq-comment-body">
+<div id="dsq-comment-message-1894" class="dsq-comment-message"><p>BSSID PWR Beacons #Data, #/s CH MB ENC CIPHER AUTH ES</p>
+<p>00:0C:F6:65:10:3B -82 3 0 0 11 54e WPA2 CCMP PSK So<br/>
+94:44:52:2D:88:D9 -81 4 0 0 5 54e WPA2 CCMP PSK St<br/>
+00:14:51:77:FF:59 -82 15 0 0 11 54 WPA2 CCMP PSK Si<br/>
+08:76:FF:B4:CB:5B -83 5 0 0 11 54e WPA2 CCMP PSK TN<br/>
+00:14:78:EB:E6:CC -84 4 0 0 6 54 . WPA2 CCMP PSK LU</p>
+<p>BSSID STATION PWR Rate Lost Packets Probes </p>
+<p>(not associated) 00:23:12:66:A8:8D -74 0 &#8211; 1 0 1<br/>
+(not associated) 3C:4A:92:D8:4F:79 -82 0 &#8211; 1 0 2<br/>
+ma perche mi viene not associated?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1895">
+<div id="dsq-comment-header-1895" class="dsq-comment-header">
+<cite id="dsq-cite-1895">
+http://mauromarano.it <span id="dsq-author-user-1895">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1895" class="dsq-comment-body">
+<div id="dsq-comment-message-1895" class="dsq-comment-message"><p>Mi dovresti spiegare un attimino il contesto..</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-3" id="dsq-comment-1896">
+<div id="dsq-comment-header-1896" class="dsq-comment-header">
+<cite id="dsq-cite-1896">
+<span id="dsq-author-user-1896">sciocco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1896" class="dsq-comment-body">
+<div id="dsq-comment-message-1896" class="dsq-comment-message"><p>Scusate volevo dire una cosa sperando di non dire sciocchezze..io ci ho provato diverse volte&#8230;ma senza riuscirci.Leggendo moooolto quà e là ho capito che non tutte le schede di rete (PCI,chiavette) supportano l&#8217; INJECTION MODE (cioè la facoltà che ha una scheda wifi di rimanere in monitor mode su un canale e nel contempo effettuare un deauth).Anzi ,visto che ci ho provato anche con 2 chiavette contemporaneamente,ho notato che se la scheda di rete non supporta l&#8217;injection mode ,non c&#8217;è nulla da fare.Neanche installando i driver mad wifi&#8230;Ecco perchè,giustamente MAURO ha specificato di utilizzare QUEL TIPO DI SCHEDA DI RETE&#8230;proprio perchè nasce per il wardriving e supporta nativamente l&#8217;INJECTION MODE.Anche io posseggo una RTL-8185&#8230;ma non và&#8230;</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-4" id="dsq-comment-1897">
+<div id="dsq-comment-header-1897" class="dsq-comment-header">
+<cite id="dsq-cite-1897">
+http://mauromarano.it <span id="dsq-author-user-1897">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1897" class="dsq-comment-body">
+<div id="dsq-comment-message-1897" class="dsq-comment-message"><p>@sciocco ha detto tutto giusto <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/><br/>
+Non tutte le chiavette supportano l&#8217;injection. Su alcune di esse è possibile fare qualcosa con diversi smanettamenti (installazione di patch, driver ecc.). Ma perderete 4 anni di vita prima di riuscire a farle funzionare.</p>
+<p>La cosa più semplice è comprare una chiavetta nata per il wardriving <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-5" id="dsq-comment-1898">
+<div id="dsq-comment-header-1898" class="dsq-comment-header">
+<cite id="dsq-cite-1898">
+<span id="dsq-author-user-1898">sciocco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1898" class="dsq-comment-body">
+<div id="dsq-comment-message-1898" class="dsq-comment-message"><p>Ho provato addirittura con 2 chiavette contemporaneamente.Una la mettevo in monitoring mentre l&#8217;altra mi serviva per tentare l&#8217;attacco di deautenticazione o fake.ma purtroppo niente anche così.credo che (e questa è una mia interpretazione) l&#8217;effettuare un deautenticazione o un fake faccia parte proprio dell&#8217;injection&#8230;.quindi se non puoi fare l&#8217;iniezione&#8230;non puoi deautenticare o fare un fake.<br/>
+A scopo didattico sicuramente potrebbe essere molto interessante andare ad arginare questo problema xò come dice MAURO , ci vorrebbe molto tempo.<br/>
+E come dice MAURO per fare piu veloce conviene una chiavetta per il wardriving&#8230;<br/>
+GRANDE MAURO!!</p>
+</div>
+</div>
+</li> 
+<li class="comment even depth-5" id="dsq-comment-2082">
+<div id="dsq-comment-header-2082" class="dsq-comment-header">
+<cite id="dsq-cite-2082">
+<span id="dsq-author-user-2082">Angelo</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2082" class="dsq-comment-body">
+<div id="dsq-comment-message-2082" class="dsq-comment-message"><p>Mauro scusa l&#8217;intrusione, ma questa chiavetta va anche su windows 7 o solo su xp. Io ho windows 7 non vorrei che non funzionasse. Grazi</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1899">
+<div id="dsq-comment-header-1899" class="dsq-comment-header">
+<cite id="dsq-cite-1899">
+<span id="dsq-author-user-1899">herman</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1899" class="dsq-comment-body">
+<div id="dsq-comment-message-1899" class="dsq-comment-message"><p>grade mauro!!!!!!! mi puoi linkare un buon dizionario italiano,grazie</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1900">
+<div id="dsq-comment-header-1900" class="dsq-comment-header">
+<cite id="dsq-cite-1900">
+http://mauromarano.it <span id="dsq-author-user-1900">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1900" class="dsq-comment-body">
+<div id="dsq-comment-message-1900" class="dsq-comment-message"><p>Lo trovi nella sezione download del sito <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1901">
+<div id="dsq-comment-header-1901" class="dsq-comment-header">
+<cite id="dsq-cite-1901">
+<span id="dsq-author-user-1901">herman</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1901" class="dsq-comment-body">
+<div id="dsq-comment-message-1901" class="dsq-comment-message"><p>grazie mauro</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1902">
+<div id="dsq-comment-header-1902" class="dsq-comment-header">
+<cite id="dsq-cite-1902">
+<span id="dsq-author-user-1902">Giulius</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1902" class="dsq-comment-body">
+<div id="dsq-comment-message-1902" class="dsq-comment-message"><p>Ciao Mauro, prima di tutto complimenti per la guida è favolosa&#8230;<br/>
+Posseggo una Dlink TL-WN722N riconosciuta immediatamente senza bisogno di driver.<br/>
+e tutto mi funziona fino alla deautenticazione della macchina&#8230;. questo è il messaggio che mi dà</p>
+<p>9:29:08 Waiting for beacon frame (BSSID: 00:26:34:A5:7F:1D) on channel 11<br/>
+19:29:08 Sending 64 directed DeAuth. STMAC: [00:15:CB:BF:59:41] [ 3|60 ACKs]</p>
+<p>sbaglio da qualche parte?&#8230; devo ripetere l&#8217;ultimo comando varie volte? o&#8230;<br/>
+DEVO PROPRIO CAMBIAR CHIAVETTA WIFI <img src='../../../../wp-includes/images/smilies/icon_sad.gif' alt=':-(' class='wp-smiley'/><br/>
+grazie ancora</p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor odd alt thread-even depth-1" id="dsq-comment-1903">
+<div id="dsq-comment-header-1903" class="dsq-comment-header">
+<cite id="dsq-cite-1903">
+http://mauromarano.it <span id="dsq-author-user-1903">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1903" class="dsq-comment-body">
+<div id="dsq-comment-message-1903" class="dsq-comment-message"><p>Non sempre al primo colpo di riesce a dutenticare un client.<br/>
+A volte bisogna ripetere più e più volte la procedura..</p>
+<p>Ma non è detto che la tua dlink supporti questa operazione..</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-2017">
+<div id="dsq-comment-header-2017" class="dsq-comment-header">
+<cite id="dsq-cite-2017">
+<span id="dsq-author-user-2017">bettone</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2017" class="dsq-comment-body">
+<div id="dsq-comment-message-2017" class="dsq-comment-message"><p> mi chiedevo se era possibile creare un dizionario, magari con jhonn the ripper?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-3" id="dsq-comment-2018">
+<div id="dsq-comment-header-2018" class="dsq-comment-header">
+<cite id="dsq-cite-2018">
+<span id="dsq-author-user-2018">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2018" class="dsq-comment-body">
+<div id="dsq-comment-message-2018" class="dsq-comment-message"><p>Ciao, certo è possibile <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> Ma richiederebbe una guida a sè spiegare come fare</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1904">
+<div id="dsq-comment-header-1904" class="dsq-comment-header">
+<cite id="dsq-cite-1904">
+<span id="dsq-author-user-1904">Igor</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1904" class="dsq-comment-body">
+<div id="dsq-comment-message-1904" class="dsq-comment-message"><p>Ciao.. Ho letto la tua guida e mi sono incuriosito quando hai parlato dei dizionari, statistiche ecc.. Ho pensato: io ho modem alice gate e le chiavi wep e wpa sono preimpostate, 13 caratteri per wep e 24 per wpa (solo lettere in minuscolo e numeri). Quindi ho pensato che potevo fare un programmino(dopo ti allego il codice in vb5) per creare il dizionario e provare brute forse attack.. XD Nella mia testa sarebbe possibile XD<br/>
+Dimmi se mi sbaglio ok?.. Ora la parte pratica.. Ho fatto partire il programma.. non mi sarei mai aspettato (credo per la mia ingenuità) ma sono passati circa 20 minuti ma il programma sta ancora compilando il file .txt e non si trova a buon punto.. fra 36 caratteri diversi tra 26 lettere inglesi e 10 numeri ha compilato 3618834 righe, cioè è arrivato alla stringa aaaaaaaaaaaaaaaaaaacfulf..quindi il prog compila il file nel seguente modo:<br/>
+aaaaaaaaaaaaaaaaaaaaaaaa<br/>
+aaaaaaaaaaaaaaaaaaaaaaab<br/>
+aaaaaaaaaaaaaaaaaaaaaaac<br/>
+&#8230;<br/>
+aaaaaaaaaaaaaaaaaaaaaa7k<br/>
+aaaaaaaaaaaaaaaaaaaaaa7l<br/>
+ecc&#8230;</p>
+<p>In fondo, che sarà mai.. 20 minuti, sta andando avanti, quindi va bene.. giusto? Eh no.. il file è arrivato a 91MB per il momento.. ho paura che non mi basterà neanche HD esterno, altro che spazio sul portatile.. </p>
+<p>Dammi qualche accertamento per favore.<br/>
+ah, dimenticavo il codice sorgente&#8230;<br/>
+..<br/>
+Te lo posto fra qualche minuto.. Il Visual Basic mi ha fatto impallare il pc.. Porca pupazza non mi ha salvato un cavolo.. Lo devo rifare</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1905">
+<div id="dsq-comment-header-1905" class="dsq-comment-header">
+<cite id="dsq-cite-1905">
+<span id="dsq-author-user-1905">Igor</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1905" class="dsq-comment-body">
+<div id="dsq-comment-message-1905" class="dsq-comment-message"><p>Ok, l&#8217;ho rifatto &#8230; Lo so che potevo usare codifica ASCII ma non ci ho pensato subito e non l&#8217;ho modificato +..</p>
+<p>Dim p(36), q, parola As String<br/>
+Dim m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24 As Integer</p>
+<p>Private Sub Command1_Click()</p>
+<p>p(1) = &#8220;a&#8221;<br/>
+p(2) = &#8220;b&#8221;<br/>
+p(3) = &#8220;c&#8221;<br/>
+p(4) = &#8220;d&#8221;<br/>
+p(5) = &#8220;e&#8221;<br/>
+p(6) = &#8220;f&#8221;<br/>
+p(7) = &#8220;g&#8221;<br/>
+p(8) = &#8220;h&#8221;<br/>
+p(9) = &#8220;i&#8221;<br/>
+p(10) = &#8220;j&#8221;<br/>
+p(11) = &#8220;k&#8221;<br/>
+p(12) = &#8220;l&#8221;<br/>
+p(13) = &#8220;m&#8221;<br/>
+p(14) = &#8220;n&#8221;<br/>
+p(15) = &#8220;o&#8221;<br/>
+p(16) = &#8220;p&#8221;<br/>
+p(17) = &#8220;q&#8221;<br/>
+p(18) = &#8220;r&#8221;<br/>
+p(19) = &#8220;s&#8221;<br/>
+p(20) = &#8220;t&#8221;<br/>
+p(21) = &#8220;u&#8221;<br/>
+p(22) = &#8220;v&#8221;<br/>
+p(23) = &#8220;w&#8221;<br/>
+p(24) = &#8220;x&#8221;<br/>
+p(25) = &#8220;y&#8221;<br/>
+p(26) = &#8220;z&#8221;<br/>
+p(27) = &#8220;1&#8243;<br/>
+p(28) = &#8220;2&#8243;<br/>
+p(29) = &#8220;3&#8243;<br/>
+p(30) = &#8220;4&#8243;<br/>
+p(31) = &#8220;5&#8243;<br/>
+p(32) = &#8220;6&#8243;<br/>
+p(33) = &#8220;7&#8243;<br/>
+p(34) = &#8220;8&#8243;<br/>
+p(35) = &#8220;9&#8243;<br/>
+p(36) = &#8220;0&#8243;<br/>
+m1 = 1<br/>
+For m1 = 1 To 36<br/>
+m2 = 1<br/>
+For m2 = 1 To 36<br/>
+m3 = 1<br/>
+For m3 = 1 To 36<br/>
+m4 = 1<br/>
+For m4 = 1 To 36<br/>
+m5 = 1<br/>
+For m5 = 1 To 36<br/>
+m6 = 1<br/>
+For m6 = 1 To 36<br/>
+m7 = 1<br/>
+For m7 = 1 To 36<br/>
+m8 = 1<br/>
+For m8 = 1 To 36<br/>
+m9 = 1<br/>
+For m9 = 1 To 36<br/>
+m10 = 1<br/>
+For m10 = 1 To 36<br/>
+m11 = 1<br/>
+For m11 = 1 To 36<br/>
+m12 = 1<br/>
+For m12 = 1 To 36<br/>
+m13 = 1<br/>
+For m13 = 1 To 36<br/>
+m14 = 1<br/>
+For m14 = 1 To 36<br/>
+m15 = 1<br/>
+For m15 = 1 To 36<br/>
+m16 = 1<br/>
+For m16 = 1 To 36<br/>
+m17 = 1<br/>
+For m17 = 1 To 36<br/>
+m18 = 1<br/>
+For m18 = 1 To 36<br/>
+m19 = 1<br/>
+For m19 = 1 To 36<br/>
+m20 = 1<br/>
+For m20 = 1 To 36<br/>
+m21 = 1<br/>
+For m21 = 1 To 36<br/>
+m22 = 1<br/>
+For m22 = 1 To 36<br/>
+m23 = 1<br/>
+For m23 = 1 To 36<br/>
+m24 = 1</p>
+<pre>
+
+<div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:600px;"><div class="text codecolorer">&nbsp; &nbsp; &nbsp; &nbsp; For m24 = 1 To 36<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Open (&quot;C:UsersDragonOfWarDesktopDizionario.txt&quot;) For Append As #1<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; q = q + p(m1) + p(m2) + p(m3) + p(m4) + p(m5) + p(m6) + p(m7) + p(m8) + p(m9) + p(m10) + p(m11) + p(m12) + p(m13) + p(m14) + p(m15) + p(m16) + p(m17) + p(m18) + p(m19) + p(m20) + p(m21) + p(m22) + p(m23) + p(m24)<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parola = Trim(q)<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Print #1, parola<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; q = &quot;&quot;<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Close 1<br/>
+<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; Next</div></div>
+
+</pre>
+<p>Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next<br/>
+Next</p>
+<p>MsgBox (&#8220;Fatto&#8221;)</p>
+<p>End Sub</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1906">
+<div id="dsq-comment-header-1906" class="dsq-comment-header">
+<cite id="dsq-cite-1906">
+<span id="dsq-author-user-1906">Igor</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1906" class="dsq-comment-body">
+<div id="dsq-comment-message-1906" class="dsq-comment-message"><p>Ay carramba.. che casino..chi mi dice come postare il codice dentro quella finestrina nera?</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1907">
+<div id="dsq-comment-header-1907" class="dsq-comment-header">
+<cite id="dsq-cite-1907">
+<span id="dsq-author-user-1907">Igor</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1907" class="dsq-comment-body">
+<div id="dsq-comment-message-1907" class="dsq-comment-message"><p>Eccolo: <a href="http://pastebin.com/dmZtitqM" rel="nofollow">http://pastebin.com/dmZtitqM</a></p>
+<p>l&#8217;ho postato qui <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> Rispondetemi miraccomando!! =)</p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor even thread-odd thread-alt depth-1" id="dsq-comment-1908">
+<div id="dsq-comment-header-1908" class="dsq-comment-header">
+<cite id="dsq-cite-1908">
+http://mauromarano.it <span id="dsq-author-user-1908">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1908" class="dsq-comment-body">
+<div id="dsq-comment-message-1908" class="dsq-comment-message"><p>Ciao Igor, anzi tutto complimenti per l&#8217;intraprendenza <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+<p>E&#8217; cosi che bisogna fare per imparare veramente certe cose. Inoltre vedo che sai anche un minimo di programmazione, che è una cosa fondamentale in certi ambiti. Per lo meno per capire come lavorano i programmi..</p>
+<p>Come ti sarai reso conto pure tu le possibili combinazioni tra lettere maiuscole e minuscole e numeri di 24 caratteri sono una cosa spaventosa.</p>
+<p>I caratteri inglesi se non sbaglio sono 26, ma nelle password alice ci sono anche i caratteri maiuscoli (vado a memoria) giusto? A questi aggiungiamo i numeri ed abbiamo 26+26+10=62 caratteri.</p>
+<p>La password di default è di 24 caratteri, quindi avremo un totale di 24^62 combinazioni. Cioè 24^62=37419414352651558693326815330014294090413719821273258864121283072167632067936781336576 O___O</p>
+<p>E&#8217; un numero cosi alto che è difficile anche da leggere.</p>
+<p>Il mio computer che è abbastanza recente (intel core i5) con aircrack testa 2000 passwords al secondo. Per provare tutte quelle password ci impiegherebbe ..troppi milioni di anni!</p>
+<p>Senza contare l&#8217;inconveniente, come facevi notare tu, che un dizionario con cosi tanti caratteri occupa più di un HD!</p>
+<p>QUindi, in tutta onestà, posso assicurarti che tentare di crackare una password in questo modo non porta a nulla <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+<p>Le uniche password che si possono tentare di crackare sono quelle non casuali e formate da nomi di persona, cose, città ecc.. Tramite un attacco dizionario!</p>
+<p>PS<br/>
+Comunque backtrack 5 ha già un programma per la generazione di password casuali. Si chiama john the ripper.</p>
+<p>Apri il terminale e muovi nella directory di john<br/>
+cd /pentest/passwords/john</p>
+<p>poi con il comando :<br/>
+./john &#8211;stdout=24 &#8211;incremental=all</p>
+<p>generi le password. Nel file di configurazione di john puoi impostare i caratteri da usare e la lunghezza minima della password.</p>
+<p>Per salvare tutto in un file basta fare</p>
+<p>./john &#8211;stdout=24 &#8211;incremental=all > /root/Desktop/dizionario.txt</p>
+<p> <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor odd alt thread-even depth-1" id="dsq-comment-1909">
+<div id="dsq-comment-header-1909" class="dsq-comment-header">
+<cite id="dsq-cite-1909">
+http://mauromarano.it <span id="dsq-author-user-1909">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1909" class="dsq-comment-body">
+<div id="dsq-comment-message-1909" class="dsq-comment-message"><p>Dimenticavo: scegliere una password robusta è sempre una cosa importante. Questo vale per qualsiasi cosa (web application, router, wifi ecc.) Con una password sufficientemente lunga e casuale siamo praticamente invulnerabili agli attacchi a forza bruta.</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1910">
+<div id="dsq-comment-header-1910" class="dsq-comment-header">
+<cite id="dsq-cite-1910">
+<span id="dsq-author-user-1910">Igor</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1910" class="dsq-comment-body">
+<div id="dsq-comment-message-1910" class="dsq-comment-message"><p>Il mio pc è stato acceso tutta la notte e poi l&#8217;ho stoppato il programma.. il file è arrivato a 3.7gb e non posso neanche aprirlo .. Notepad++ non lo apre xke è troppo grosso, Word non apre i file superiori a 512mb.. Cmq sicuramente avrò qualcosa da chiederti quando provo ./john –stdout=24 –incremental=all.. Grazie , A dopo</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1911">
+<div id="dsq-comment-header-1911" class="dsq-comment-header">
+<cite id="dsq-cite-1911">
+<span id="dsq-author-user-1911">Igor</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1911" class="dsq-comment-body">
+<div id="dsq-comment-message-1911" class="dsq-comment-message"><p>scusa mi dici come hai calcolato 24^62=37419414352651558693326815330014294090413719821273258864121283072167632067936781336576 </p>
+<p>??</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1912">
+<div id="dsq-comment-header-1912" class="dsq-comment-header">
+<cite id="dsq-cite-1912">
+http://mauromarano.it <span id="dsq-author-user-1912">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1912" class="dsq-comment-body">
+<div id="dsq-comment-message-1912" class="dsq-comment-message"><p>24 è il numero di caratteri che compone la password WPA mentre 62 sono i caratteri che possono comporre la password (26 lowercase, 26 uppercase e 10 numeri).</p>
+<p>SU linux puoi aprire file di qualsiasi dimensione. Basta usare un editor integrato nel terminale come vi o nano.</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1913">
+<div id="dsq-comment-header-1913" class="dsq-comment-header">
+<cite id="dsq-cite-1913">
+<span id="dsq-author-user-1913">Igor</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1913" class="dsq-comment-body">
+<div id="dsq-comment-message-1913" class="dsq-comment-message"><p>nono, intendevo proprio il programma con il quale hai fatto il calcolo..</p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor even thread-even depth-1" id="dsq-comment-1914">
+<div id="dsq-comment-header-1914" class="dsq-comment-header">
+<cite id="dsq-cite-1914">
+http://mauromarano.it <span id="dsq-author-user-1914">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1914" class="dsq-comment-body">
+<div id="dsq-comment-message-1914" class="dsq-comment-message"><p>Ho usato la l&#8217;is python. Dal terminale ho dato il comando python e poi basta fare 24**62</p>
+</p>
+<p>Dove ** sta per l&#8217;operazione esponente.</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1915">
+<div id="dsq-comment-header-1915" class="dsq-comment-header">
+<cite id="dsq-cite-1915">
+<span id="dsq-author-user-1915">Marco77</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1915" class="dsq-comment-body">
+<div id="dsq-comment-message-1915" class="dsq-comment-message"><p>Non funziona i metodi trovati in rete, ho sprecato 1 mese a provare tutto, menomale che ho trovato servizio H, veramente lavorano, mi hanno gia&#8217; trovato 5 password, prezzi abbastanza alti, pero&#8217; qualita&#8217; al 100% mi fido di loro, provate il loro contatto ***censurato***</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1916">
+<div id="dsq-comment-header-1916" class="dsq-comment-header">
+<cite id="dsq-cite-1916">
+http://mauromarano.it <span id="dsq-author-user-1916">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1916" class="dsq-comment-body">
+<div id="dsq-comment-message-1916" class="dsq-comment-message"><p>Non è affatto vero che non funziona. Questo è un metodo scientifico e se sai quello che fai, nei limiti dello stesso, ottieni quello che vuoi.</p>
+<p>Come ho ripetuto tante volte se la password è casuale e composta da tanti caratteri non c&#8217;è modo per trovarla.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-3" id="dsq-comment-2222">
+<div id="dsq-comment-header-2222" class="dsq-comment-header">
+<cite id="dsq-cite-2222">
+<span id="dsq-author-user-2222">Al.</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2222" class="dsq-comment-body">
+<div id="dsq-comment-message-2222" class="dsq-comment-message"><p>Marco che cos&#8217;e&#8217; il &#8220;servizio h&#8221; ?</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1917">
+<div id="dsq-comment-header-1917" class="dsq-comment-header">
+<cite id="dsq-cite-1917">
+<span id="dsq-author-user-1917">Marcello</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1917" class="dsq-comment-body">
+<div id="dsq-comment-message-1917" class="dsq-comment-message"><p>Io trovo una grandissima perdita di tempo tutto cio&#8217; . Il protocollo wep ormai e&#8217; obsoleto e non lo usa quasi nessuno , la wpa e wpa2 sono generalmente impostati di fabbrica per la maggior parte dei modem router con codici a 12 cifre mischiate in maiuscole minuscole e numeri ( quindi il famoso dizionario serve solo a farsi le pugn&#8230;.tte . Trovo piu&#8217; utile studiare i logaritmi dei rooter dati dai gestori come ad esempio nel caso di chi ha scritto il programmino &#8220;wi-fi inspector&#8221;.</p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor odd alt thread-odd thread-alt depth-1" id="dsq-comment-1918">
+<div id="dsq-comment-header-1918" class="dsq-comment-header">
+<cite id="dsq-cite-1918">
+http://mauromarano.it <span id="dsq-author-user-1918">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1918" class="dsq-comment-body">
+<div id="dsq-comment-message-1918" class="dsq-comment-message"><p>E&#8217; una grandissima perdita di tempo per chi vuole fregare la connessione del vicino, questo si.</p>
+<p>Ma per chi desidera veramente imparare qualcosa (ed è questo lo scopo del tutorial) penso, o almeno cosi mi dicono, sia molto utile <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1919">
+<div id="dsq-comment-header-1919" class="dsq-comment-header">
+<cite id="dsq-cite-1919">
+<span id="dsq-author-user-1919">gino</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1919" class="dsq-comment-body">
+<div id="dsq-comment-message-1919" class="dsq-comment-message"><p>Ciao mauro, complimenti per le tue guide, sempre illuminanti. Avrei bisogno del tuo aiuto, ho seguito la tua guida alla lettera cercando di capire tutti i passaggi senza &#8220;copiare alla cieca&#8221; arrivato però ad un punto non riesco ad andare avanti. Non riesco a capire il passaggio finale quando devo selezionare un dizionario. Dando il comando finale(per l&#8217;attacco brute force):<br/>
+aircrack-ng test.xxxxxxxxxxxxx-01.cap -w wordlist.txt mi dice &#8220;dizionario non trovato&#8221;.<br/>
+In realtà io ho un dizionario nella chiavetta in cui ho installato backtrack 5 che ho chiamato wordlist.txt ma non riesce a trovarlo&#8230;.il file si trova appena entri nella pendrive (la pendrive si chiama semplicemente kingstone) come devo fare ad indicare nel comando il punto di origine del dizionario? Grazie in anticipo.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-2" id="dsq-comment-1920">
+<div id="dsq-comment-header-1920" class="dsq-comment-header">
+<cite id="dsq-cite-1920">
+http://mauromarano.it <span id="dsq-author-user-1920">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1920" class="dsq-comment-body">
+<div id="dsq-comment-message-1920" class="dsq-comment-message"><p>Ciao Gino, il tuo problema è che il comando che ho usato io è valido se il dizionario si trova nella home del tuo account.</p>
+<p>Per risolvere devi specificare la path completa al dizionario. </p>
+<p>La cosa più semplice da fare è trascinare il file dalla sua location alla finestra del terminale. Cosi facendo ti copierà automaticamente la path completa <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+<p>Oppure, in alternativa, copia il dizionario nella home del tuo account e rilancia lo stesso comando della guida <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+<p>Fammi sapere</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-3" id="dsq-comment-1921">
+<div id="dsq-comment-header-1921" class="dsq-comment-header">
+<cite id="dsq-cite-1921">
+<span id="dsq-author-user-1921">gino</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1921" class="dsq-comment-body">
+<div id="dsq-comment-message-1921" class="dsq-comment-message"><p>ciao mauro, si ci sono riuscito scrivendo il percorso completo sia per quanto riguarda il file.cap che quello .txt (/root/xxxxx.cap ; /root/wordlist.text) e devo dirti che tutto sommato non è stato complicatissimo, a parte quest&#8217; ultimo passo, vista la mia ignoranza rigurdante il mondo linux. Io ho provato a crackare la mia rete wireless con un portatile e mi sono reso conto che nel caso l&#8217;avesse fatto qualcuno a me estraneo non mi sarei accorto di nulla. Se qualcuno entra nella mia rete, posso vederlo in qualche modo? E&#8217; vero che ci sono dei programmi che posso nascondere coloro che &#8220;scroccano&#8221; la rete?<br/>
+Grazie, di tutto.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor odd alt depth-4" id="dsq-comment-1922">
+<div id="dsq-comment-header-1922" class="dsq-comment-header">
+<cite id="dsq-cite-1922">
+http://mauromarano.it <span id="dsq-author-user-1922">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1922" class="dsq-comment-body">
+<div id="dsq-comment-message-1922" class="dsq-comment-message"><p>Se hai seguito la guida hai anche &#8220;nascosto&#8221; te stesso <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+<p>Hai visto nel passaggio in cui cambi il tuo mac adress? Bene, se un intruso si intrufola nella tua rete e si cambia il mac adress con uno di un TUO dispositivo tu come fai ad accorgertene? <img src='../../../../wp-includes/images/smilies/icon_razz.gif' alt=':P' class='wp-smiley'/> </p>
+<p>Puoi controllare nella pagina di impostazioni del tuo router i dispositivi collegati guardando il loro mac adress e loro indirizzo ip.</p>
+<p>In ogni caso, la cosa più semplice è cambiare la tua password con una password sicura composta da lettere maiuscole e minuscole, numeri e simboli. Creala lunga almeno 20 caratteri e dormi sonni tranquilli.</p>
+<p>Una password del genere è incrackabile <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1923">
+<div id="dsq-comment-header-1923" class="dsq-comment-header">
+<cite id="dsq-cite-1923">
+<span id="dsq-author-user-1923">gino</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1923" class="dsq-comment-body">
+<div id="dsq-comment-message-1923" class="dsq-comment-message"><p>hahahaha, si hai ragione! :_) Grazie del consiglio è quello che farò. Buon proseguimento.</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1924">
+<div id="dsq-comment-header-1924" class="dsq-comment-header">
+<cite id="dsq-cite-1924">
+<span id="dsq-author-user-1924">Fabio</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1924" class="dsq-comment-body">
+<div id="dsq-comment-message-1924" class="dsq-comment-message"><p>Sicuramente sarà una domanda stupida,ma se faccio partire backtrack da cd, quindi senza istallarlo, come faccio a dirgli di prendere il file &#8220;dizionario&#8221; salvato sull&#8217;hard disk del pc? e se mi salva i pacchetti su cd e non su disco avrò spazio a sufficienza?<br/>
+Grazie</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1925">
+<div id="dsq-comment-header-1925" class="dsq-comment-header">
+<cite id="dsq-cite-1925">
+http://mauromarano.it <span id="dsq-author-user-1925">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1925" class="dsq-comment-body">
+<div id="dsq-comment-message-1925" class="dsq-comment-message"><p>Backtrack lo devi installare! Ma nella macchina virtuale</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1926">
+<div id="dsq-comment-header-1926" class="dsq-comment-header">
+<cite id="dsq-cite-1926">
+<span id="dsq-author-user-1926">Manuel</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1926" class="dsq-comment-body">
+<div id="dsq-comment-message-1926" class="dsq-comment-message"><p>Ho alcune domande riguardo questa affermazione giusto per avere chiarezza:<br/>
+&#8220;&#8221;Se nessun client è collegato alla rete non è possibile violare la rete&#8221; handshake —deauth&#8221;</p>
+<p>1# Per conoscere l&#8217;handshake un client deve essere collegato?<br/>
+2# Conseguentemente l&#8217;unico attacco disponibile è —deauth?<br/>
+3# Tovato l&#8217;handshake ed il client si disconnette definitivamente, possiamo procedere ugualmente con l&#8217;attacco?<br/>
+4# Ci sono altri modi per conoscere un handshake?</p>
+<p>Grazie anticipatamente!:D</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1927">
+<div id="dsq-comment-header-1927" class="dsq-comment-header">
+<cite id="dsq-cite-1927">
+http://mauromarano.it <span id="dsq-author-user-1927">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1927" class="dsq-comment-body">
+<div id="dsq-comment-message-1927" class="dsq-comment-message"><p>1) si, oppure si deve collegare mentre sei in ascolto</p>
+<p>2) si</p>
+<p>3) SOLO se hai già catturato l&#8217;handshake, se non lo hai catturato e lui si disconnette non ti rimane altro che attendere in ascolto che lui si riconnetta</p>
+<p>4) no</p>
+<p>Immagina la cattura dell&#8217;handshake come la pesca con una canna da pesca.</p>
+<p>Tu butti la lenza e aspetti che il pesce abocchi. La cattura dell&#8217;handshake è la stessa cosa: stai in ascolto fino a quando un client si collega <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-1928">
+<div id="dsq-comment-header-1928" class="dsq-comment-header">
+<cite id="dsq-cite-1928">
+<span id="dsq-author-user-1928">Manuel</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1928" class="dsq-comment-body">
+<div id="dsq-comment-message-1928" class="dsq-comment-message"><p>Come vedo siamo nottambuli vabbe&#8217; da buon smanettoni ihihii&#8230; comunque peccato per la risposta numero 4 ahhhaha ci speravo!!!! Altro domanda (che palle oh!:P) &#8230;</p>
+<p>E&#8217; possibile che un cliente sia connesso ma non riusciamo a visualizzarlo magari grazie al suo &#8220;super&#8221; WPA2? O altre cose del genere? </p>
+<p>Again&#8230; Tralasciando stare le differenze teoriche delle due chiavi, il metodo illustrato e&#8217; valido per entrambe? (WPA/WPA2 e varie diciture) ??? </p>
+<p>Concludo con una richiesta, perche&#8217; non fai un bel tutorial per crunch, come creare una wordlist, come unirne due, come eliminare i doppioni ecc.. fattta per bene come si deve&#8230; in giro tutti vantano quel famoso file torrent che estrattato diventa 13gb&#8230; l&#8217;ho provato estraendolo abbiamo un CUSTOM-WPA.lst e SUPER-WPA.lst&#8230; ho messo la mia città natale come passwd e non ha trovato nulla ahahaha&#8230; tra l&#8217;altro e&#8217; anche capoluogo di regione&#8230; neanche avessi messo mozambico!!! ihihih tutto qui potrebbe tornare utile alla community e magari per cointribuire ognuno può mandare la sua wordlist e dopo averne raccolte un bel le uniamo e linki sul blog ihii&#8230; no vabbè sto male e&#8217; notte fonda&#8230; ti saluto&#8230; grazie come sempre&#8230; <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+<ul class="children">
+<li class="comment byuser comment-author-mauro bypostauthor even depth-2" id="dsq-comment-1929">
+<div id="dsq-comment-header-1929" class="dsq-comment-header">
+<cite id="dsq-cite-1929">
+http://mauromarano.it <span id="dsq-author-user-1929">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1929" class="dsq-comment-body">
+<div id="dsq-comment-message-1929" class="dsq-comment-message"><p>Guarda non ti so rispondere con certezza sui client &#8220;visibili&#8221;. Dalle mie prove, sulla mia rete, sono sempre riuscito a vedere i client collegati. Penso che questo valga un po&#8217; per tutte le reti. Se un client è collegato per forza di cose scambia dati con l&#8217;AP, ergo aricrack dovrebbe riuscire a vederlo.</p>
+<p>Dalle mie prove il metodo illustrato vale per tutte le reti wpa.</p>
+<p>Prendo in considerazione l&#8217;ipotesi di fare in futuro un video sull&#8217;utilizzo dei programmi per la creazione delle wordlist. Non c&#8217;è solo crunch, ce ne sono anche tanti altri.</p>
+<p>I file torrent che contengono quelle mega wordlist (e fidati, ho visto wordlist di oltre 100gb) non servono a nulla.</p>
+<p>Se si vuole veramente attaccare una rete wpa, con tutti i rischi che ne conseguono (cioè che se la password è una password sicura stai perdendo solo tempo) la cosa più conveniente da fare è fare social engineering e creare un dizionario ad hoc in funzione della vittima.</p>
+<p>Mi spiego meglio, se la tua wordlist da 13gb contiene anche tutte le frasi in inglese, ma la tua vittima è italiana e non sa dire nemmeno &#8220;ciao&#8221; in inglese, non è efficiente utilizzarla.</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1976">
+<div id="dsq-comment-header-1976" class="dsq-comment-header">
+<cite id="dsq-cite-1976">
+http://www.facebook.com/ <span id="dsq-author-user-1976">vito</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1976" class="dsq-comment-body">
+<div id="dsq-comment-message-1976" class="dsq-comment-message"><p>mauro non capisco questo passaggio:<br/>
+&#8221; aireplay-ng —deauth 1 -a XX:XX:XX:XX:XX -c YY:YY:YY:YY:YY:YY mon0&#8243;<br/>
+come faccio a sapere se ho beccato l handshake, e a cosa serve quel comando che ho riportato sopra&#8230;. posso lanciare quel comando senza aver beccato l handshake?</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1977">
+<div id="dsq-comment-header-1977" class="dsq-comment-header">
+<cite id="dsq-cite-1977">
+http://www.facebook.com/ <span id="dsq-author-user-1977">vito</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1977" class="dsq-comment-body">
+<div id="dsq-comment-message-1977" class="dsq-comment-message"><p>mauro il download non va, forse con il trasferimento del server? <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1978">
+<div id="dsq-comment-header-1978" class="dsq-comment-header">
+<cite id="dsq-cite-1978">
+http://www.facebook.com/ <span id="dsq-author-user-1978">vito</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1978" class="dsq-comment-body">
+<div id="dsq-comment-message-1978" class="dsq-comment-message"><p>(quella del dizionario)</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1980">
+<div id="dsq-comment-header-1980" class="dsq-comment-header">
+<cite id="dsq-cite-1980">
+http://www.facebook.com/ <span id="dsq-author-user-1980">giuseppe</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1980" class="dsq-comment-body">
+<div id="dsq-comment-message-1980" class="dsq-comment-message"><p>ciao mauro, ottima guida, anche io ho lo stesso problema, ho scaricato il dizionario da un altro sito, ma come lo estraggo da backtrack graie mille</p>
+</div>
+</div>
+</li> 
+<li class="comment byuser comment-author-mauro bypostauthor odd alt thread-odd thread-alt depth-1" id="dsq-comment-1983">
+<div id="dsq-comment-header-1983" class="dsq-comment-header">
+<cite id="dsq-cite-1983">
+<span id="dsq-author-user-1983">Mauro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1983" class="dsq-comment-body">
+<div id="dsq-comment-message-1983" class="dsq-comment-message"><p>@vito hai ragione, i download non vanno. Grazie per la segnalazione!</p>
+<p>Provvedo a sistemare il problema <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-1985">
+<div id="dsq-comment-header-1985" class="dsq-comment-header">
+<cite id="dsq-cite-1985">
+http://www.facebook.com/ <span id="dsq-author-user-1985">vito</span>
+</cite>
+</div>
+<div id="dsq-comment-body-1985" class="dsq-comment-body">
+<div id="dsq-comment-message-1985" class="dsq-comment-message"><p>mauro è il minimo che possa fare <img src='../../../../wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2006">
+<div id="dsq-comment-header-2006" class="dsq-comment-header">
+<cite id="dsq-cite-2006">
+<span id="dsq-author-user-2006">Betoonman</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2006" class="dsq-comment-body">
+<div id="dsq-comment-message-2006" class="dsq-comment-message"><p>scusa volevo sapere se usando BT 5r2 su vmware player gratis , funziona? </p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-2007">
+<div id="dsq-comment-header-2007" class="dsq-comment-header">
+<cite id="dsq-cite-2007">
+<span id="dsq-author-user-2007">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2007" class="dsq-comment-body">
+<div id="dsq-comment-message-2007" class="dsq-comment-message"><p>Guarda non te lo so dire con certezza. Non ho mai provato.</p>
+<p>Prova a vedere se funziona, altrimenti scarica virtualbox che è gratuito e funziona molto bene <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-2041">
+<div id="dsq-comment-header-2041" class="dsq-comment-header">
+<cite id="dsq-cite-2041">
+<span id="dsq-author-user-2041">Antonio</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2041" class="dsq-comment-body">
+<div id="dsq-comment-message-2041" class="dsq-comment-message"><p>Il link per i dizionari non funziona, arebbe possibile ripristinarlo ?<br/>
+Intanto grazie 1000, ho letto sia questo che l&#8217;altro articolo per le WEP. Sto migliorando la mia dimestichezza in ambito linux anche grazie alla piccola soddisfazione di aver trovato la mia password WEP con non poche difficoltà <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> </p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-2043">
+<div id="dsq-comment-header-2043" class="dsq-comment-header">
+<cite id="dsq-cite-2043">
+<span id="dsq-author-user-2043">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2043" class="dsq-comment-body">
+<div id="dsq-comment-message-2043" class="dsq-comment-message"><p>I download ora dovrebbero funzionare <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2090">
+<div id="dsq-comment-header-2090" class="dsq-comment-header">
+<cite id="dsq-cite-2090">
+<span id="dsq-author-user-2090">Giuseppe</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2090" class="dsq-comment-body">
+<div id="dsq-comment-message-2090" class="dsq-comment-message"><p>Salve mauro chiedo scusa, ho un notebook acer e non so bene quale sia la mia scheda di rete(ovvero i comandi che devo usare), tutto questo perche quando arrivo all&#8217;autenticazione del client&#8230; mi dice che &#8220;non sono associato&#8221;, possibile che sia la scheda di rete?, scusami ancora e grazie per la pazienza che hai con gente come me perfettamente imbranata. <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-2106">
+<div id="dsq-comment-header-2106" class="dsq-comment-header">
+<cite id="dsq-cite-2106">
+<span id="dsq-author-user-2106">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2106" class="dsq-comment-body">
+<div id="dsq-comment-message-2106" class="dsq-comment-message"><p>Mauro ho un problema di questo tipo,uso BT5R3 su virtual box con awus036h come da te descritto,la awus precedentemente installata non viene vista in backtrack con il comando airmon-ng, cosa devo fare?<br/>
+Grazie in anticipo,<br/>
+Marco</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-2" id="dsq-comment-2108">
+<div id="dsq-comment-header-2108" class="dsq-comment-header">
+<cite id="dsq-cite-2108">
+<span id="dsq-author-user-2108">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2108" class="dsq-comment-body">
+<div id="dsq-comment-message-2108" class="dsq-comment-message"><p>Assicurati che la chiavetta sia collegata a virtualbox. Ci deve essere un menu che permette alle periferiche di passare dalla macchina principale a virtualbox.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-3" id="dsq-comment-2112">
+<div id="dsq-comment-header-2112" class="dsq-comment-header">
+<cite id="dsq-cite-2112">
+<span id="dsq-author-user-2112">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2112" class="dsq-comment-body">
+<div id="dsq-comment-message-2112" class="dsq-comment-message"><p>Grazie Mauro, per quello ho risolto, l&#8217;altro problema che ho adesso e&#8217; che non mi vede la mia rete wifi vodafone ma trova altre cose che non so cosa sono, magari altre reti pero&#8217; sotto la voce BSSID c&#8217;e&#8217; scritto non associato e sotto la voce ESSID non c&#8217;e&#8217; niente, sai cosa posso fare?Grazie in anticipo</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-4" id="dsq-comment-2113">
+<div id="dsq-comment-header-2113" class="dsq-comment-header">
+<cite id="dsq-cite-2113">
+<span id="dsq-author-user-2113">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2113" class="dsq-comment-body">
+<div id="dsq-comment-message-2113" class="dsq-comment-message"><p>sicuro che la tua rete non sia wep?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-5" id="dsq-comment-2114">
+<div id="dsq-comment-header-2114" class="dsq-comment-header">
+<cite id="dsq-cite-2114">
+<span id="dsq-author-user-2114">Marcp</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2114" class="dsq-comment-body">
+<div id="dsq-comment-message-2114" class="dsq-comment-message"><p>A dire il vero non sono certo di che tipo di chiave sia, non ho un modo per saperlo?</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt depth-5" id="dsq-comment-2115">
+<div id="dsq-comment-header-2115" class="dsq-comment-header">
+<cite id="dsq-cite-2115">
+<span id="dsq-author-user-2115">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2115" class="dsq-comment-body">
+<div id="dsq-comment-message-2115" class="dsq-comment-message"><p>Certo! Dai il comando:</p>
+<p>airodump-ng mon0</p>
+<p> E vedi al nome della tua rete che tipo di protezione è associata!</p>
+</div>
+</div>
+</li> 
+<li class="comment even depth-5" id="dsq-comment-2117">
+<div id="dsq-comment-header-2117" class="dsq-comment-header">
+<cite id="dsq-cite-2117">
+<span id="dsq-author-user-2117">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2117" class="dsq-comment-body">
+<div id="dsq-comment-message-2117" class="dsq-comment-message"><p>Mauro ho verificato, con il comando ke mi hai detto vedo finalmente la mia rete vodafone, la chiave e&#8217; wpa,pero&#8217; con il comando airodump-ng &#8211;encrypt wep mon0 non me la vede la mia rete, cosa devo fare?</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt depth-5" id="dsq-comment-2118">
+<div id="dsq-comment-header-2118" class="dsq-comment-header">
+<cite id="dsq-cite-2118">
+<span id="dsq-author-user-2118">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2118" class="dsq-comment-body">
+<div id="dsq-comment-message-2118" class="dsq-comment-message"><p>impostando l&#8217;opzione &#8211;encrypt wep tu stai dicendo ad aircrack di cercare SOLO le reti wep. La tua rete, essendo wpa, giustamente non viene trovata <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-2116">
+<div id="dsq-comment-header-2116" class="dsq-comment-header">
+<cite id="dsq-cite-2116">
+<span id="dsq-author-user-2116">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2116" class="dsq-comment-body">
+<div id="dsq-comment-message-2116" class="dsq-comment-message"><p>Ciao Mauro, perche quando sono i windows la awus mi vede la rete vodafone che ha una cifratura wpa e invece quando attivo back track la awus si disattiva da windows e si attiva in backtrack non mi vede la rete vodafone?</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-2119">
+<div id="dsq-comment-header-2119" class="dsq-comment-header">
+<cite id="dsq-cite-2119">
+<span id="dsq-author-user-2119">Cris</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2119" class="dsq-comment-body">
+<div id="dsq-comment-message-2119" class="dsq-comment-message"><p>Come si fa a crackare una rete Wi-fi dove ci chiede anche l&#8217; ID ?<br/>
+Grazie in anticipo.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-2120">
+<div id="dsq-comment-header-2120" class="dsq-comment-header">
+<cite id="dsq-cite-2120">
+<span id="dsq-author-user-2120">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2120" class="dsq-comment-body">
+<div id="dsq-comment-message-2120" class="dsq-comment-message"><p>Quelle sono delle reti particolari, ci vorrebbe un articolo a posta.</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2128">
+<div id="dsq-comment-header-2128" class="dsq-comment-header">
+<cite id="dsq-cite-2128">
+<span id="dsq-author-user-2128">Marco</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2128" class="dsq-comment-body">
+<div id="dsq-comment-message-2128" class="dsq-comment-message"><p>Ciao Mauro, il dizionario che ho e&#8217; di 33 GB ed e&#8217; in formato .lzma, una volta trovato l&#8217;handshake come faccio ad utilizzare questo dizionario?<br/>
+Grazie in anticipo</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-2144">
+<div id="dsq-comment-header-2144" class="dsq-comment-header">
+<cite id="dsq-cite-2144">
+<span id="dsq-author-user-2144">luca</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2144" class="dsq-comment-body">
+<div id="dsq-comment-message-2144" class="dsq-comment-message"><p>io e un mio amico abbiamo creato un programma che può creare qualsiasi password e scriverla su dizionario &#8230; ovviamente per scriverle tutte ci vuole un sacco di tempo (parlo di giorni) ma escono tutte le combinazioni possibili del mondo &#8230; per iniziare abbiamo provato con password da 8 a 10 caratteri &#8230; e ci sono tutte</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-2" id="dsq-comment-2145">
+<div id="dsq-comment-header-2145" class="dsq-comment-header">
+<cite id="dsq-cite-2145">
+<span id="dsq-author-user-2145">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2145" class="dsq-comment-body">
+<div id="dsq-comment-message-2145" class="dsq-comment-message"><p>Ciao Luca, le iniziative come le tue sono interessanti. Anche se esistono già tools che fanno queste cose. Uno dei più popolari si chiama john the ripper!</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-2198">
+<div id="dsq-comment-header-2198" class="dsq-comment-header">
+<cite id="dsq-cite-2198">
+<span id="dsq-author-user-2198">utente</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2198" class="dsq-comment-body">
+<div id="dsq-comment-message-2198" class="dsq-comment-message"><p>Salve a tutti e complimenti per la guida ben fatta, e seguendo tutti i passaggi sono riuscito a fare tutto, ma ho solo un dubbio, nel caso di password composte da più parole mi sembra che il meccanismo non funzioni..<br/>
+faccio un esempio, per una password tipo &#8221; pippo &#8221; se la parola pippo è nella lista è immediato, ma se la password è &#8221; pippo 1234 &#8221; se anche tutte e 2, 3,4 o quante che siano le parole mi sembra che non trovi niente..<br/>
+sbaglio io qualcosa o è un lmite di questo meccanismo?<br/>
+grazie per la eventuale risposta.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-2" id="dsq-comment-2199">
+<div id="dsq-comment-header-2199" class="dsq-comment-header">
+<cite id="dsq-cite-2199">
+<span id="dsq-author-user-2199">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2199" class="dsq-comment-body">
+<div id="dsq-comment-message-2199" class="dsq-comment-message"><p>La password completa deve essere nel dizionario. Se la password è &#8220;pippo1234&#8243; nel dizionario ci deve essere questa identica stringa.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-3" id="dsq-comment-2200">
+<div id="dsq-comment-header-2200" class="dsq-comment-header">
+<cite id="dsq-cite-2200">
+<span id="dsq-author-user-2200">utente</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2200" class="dsq-comment-body">
+<div id="dsq-comment-message-2200" class="dsq-comment-message"><p>al momento non c&#8217;è un modo per superare questo limite?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-4" id="dsq-comment-2201">
+<div id="dsq-comment-header-2201" class="dsq-comment-header">
+<cite id="dsq-cite-2201">
+<span id="dsq-author-user-2201">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2201" class="dsq-comment-body">
+<div id="dsq-comment-message-2201" class="dsq-comment-message"><p>Si, ci sono due possibilità.</p>
+<p>1) Sfruttare un bruteforce wps, qualora il router ne fosse vulnerabile</p>
+<p>2) Provare tutte le combinazioni possibili, quindi creare un dizionario con tutte le possibili combinazioni di lettere e numeri.</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-5" id="dsq-comment-2202">
+<div id="dsq-comment-header-2202" class="dsq-comment-header">
+<cite id="dsq-cite-2202">
+<span id="dsq-author-user-2202">utente</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2202" class="dsq-comment-body">
+<div id="dsq-comment-message-2202" class="dsq-comment-message"><p>la 1° ok<br/>
+ma la 2° una cosa abbastanza folle <img src='../../../../wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley'/> ehhehe</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt depth-5" id="dsq-comment-2203">
+<div id="dsq-comment-header-2203" class="dsq-comment-header">
+<cite id="dsq-cite-2203">
+<span id="dsq-author-user-2203">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2203" class="dsq-comment-body">
+<div id="dsq-comment-message-2203" class="dsq-comment-message"><p>eh si!</p>
+</div>
+</div>
+</li> 
+<li class="comment even depth-5" id="dsq-comment-2204">
+<div id="dsq-comment-header-2204" class="dsq-comment-header">
+<cite id="dsq-cite-2204">
+<span id="dsq-author-user-2204">Matteo</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2204" class="dsq-comment-body">
+<div id="dsq-comment-message-2204" class="dsq-comment-message"><p>Beh basterrebbe crearsi un semplice programmino in C per modificare un file di testo ! Non la vedo ardua, anzi !!</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-2210">
+<div id="dsq-comment-header-2210" class="dsq-comment-header">
+<cite id="dsq-cite-2210">
+<span id="dsq-author-user-2210">Terminator</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2210" class="dsq-comment-body">
+<div id="dsq-comment-message-2210" class="dsq-comment-message"><p>Ma se potessi usare il supercomputer roadrunner e un dizionario da migliaia di terabyte potrei trovare la password prima dell&#8217;armagheddon?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-2211">
+<div id="dsq-comment-header-2211" class="dsq-comment-header">
+<cite id="dsq-cite-2211">
+<span id="dsq-author-user-2211">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2211" class="dsq-comment-body">
+<div id="dsq-comment-message-2211" class="dsq-comment-message"><p>Non so quanto potente sia questo computer, ma non penso.</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2214">
+<div id="dsq-comment-header-2214" class="dsq-comment-header">
+<cite id="dsq-cite-2214">
+<span id="dsq-author-user-2214">Pino</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2214" class="dsq-comment-body">
+<div id="dsq-comment-message-2214" class="dsq-comment-message"><p>Ho provato la guida, è chiara e completa. Vorrei chiedere una cosa riguardo a un&#8217;altra ipotesi: </p>
+<p>se il pc principale della rete è collegato via cavo ed è attivo il filtro mac, come si potrebbe fare per disattivarlo se il mac del pc che sta attaccando la rete non è nei consentiti usando sempre BackTrack?<br/>
+Grazie.</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-2215">
+<div id="dsq-comment-header-2215" class="dsq-comment-header">
+<cite id="dsq-cite-2215">
+<span id="dsq-author-user-2215">Alessandro</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2215" class="dsq-comment-body">
+<div id="dsq-comment-message-2215" class="dsq-comment-message"><p>non capisco come mai l&#8217;handshake mi venga uguale al bssid. cosa potrei aver sbagliato?</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2218">
+<div id="dsq-comment-header-2218" class="dsq-comment-header">
+<cite id="dsq-cite-2218">
+<span id="dsq-author-user-2218">wiSe</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2218" class="dsq-comment-body">
+<div id="dsq-comment-message-2218" class="dsq-comment-message"><p>Ma comunque la morale della favore è che se la password non è contenuta nel dizionario, nonostante si abbia l&#8217;handshake, è impossibile accedere alla rete.<br/>
+Esatto?</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-2219">
+<div id="dsq-comment-header-2219" class="dsq-comment-header">
+<cite id="dsq-cite-2219">
+<span id="dsq-author-user-2219">maurospage</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2219" class="dsq-comment-body">
+<div id="dsq-comment-message-2219" class="dsq-comment-message"><p>si</p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-even depth-1" id="dsq-comment-2225">
+<div id="dsq-comment-header-2225" class="dsq-comment-header">
+<cite id="dsq-cite-2225">
+<span id="dsq-author-user-2225">Fede</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2225" class="dsq-comment-body">
+<div id="dsq-comment-message-2225" class="dsq-comment-message"><p>Ciao volevo farti una domanda spero tu mi risponda al più presto&#8230;<br/>
+Dopo aver scaricato il dizionario basta così??? cioè non deve farci niente con il dizionario lo scarico e lo tengo sul desktop di windows e dopo avvio backtrack da cd??? o devo fare qualcosa con il dizionario???</p>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="dsq-comment-2226">
+<div id="dsq-comment-header-2226" class="dsq-comment-header">
+<cite id="dsq-cite-2226">
+<span id="dsq-author-user-2226">Fede</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2226" class="dsq-comment-body">
+<div id="dsq-comment-message-2226" class="dsq-comment-message"><p>Volevo comunque anticiparti i miei più sentiti ringraziamenti per questo tutorial <img src='../../../../wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley'/> </p>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2234">
+<div id="dsq-comment-header-2234" class="dsq-comment-header">
+<cite id="dsq-cite-2234">
+<span id="dsq-author-user-2234">eddysar</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2234" class="dsq-comment-body">
+<div id="dsq-comment-message-2234" class="dsq-comment-message"><p>Chi mi consiglia un buon dizionario in formato txt?</p>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="dsq-comment-2235">
+<div id="dsq-comment-header-2235" class="dsq-comment-header">
+<cite id="dsq-cite-2235">
+<span id="dsq-author-user-2235">23thewolf</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2235" class="dsq-comment-body">
+<div id="dsq-comment-message-2235" class="dsq-comment-message"><p>Ciao massimo sto seguendo le tue guide con molto interesse tuttavia mi trovo in difficoltà&#8230;ho scaricato vmware 10 e backtrack 5. ho windows 8. ho installato vmware, vado su create a new virtual machine, seleziono typical, seleziono il file iso di backtrack, seleziono il sistema operativo (windows8, ho provato anche ubuntu ma è uguale),seleziono la directory, seleziono split virtual disk into multiple file, confermo e faccio partire la macchina virtuale ma mi da:VMware Workstation unrecoverable error: (vcpu-0)</p>
+<p>vcpu-0:VMM fault 14: src=MONITOR rip=0&#215;0 regs=0xfffffffffc008e00</p>
+<p>A log file is available in &#8220;C:UsersIvanDocumentsVirtual MachinesWindows 8 (2)vmware.log&#8221;. </p>
+<p>You can request support. </p>
+<p>To collect data to submit to VMware support, choose &#8220;Collect Support Data&#8221; from the Help menu.</p>
+<p>You can also run the &#8220;vm-support&#8221; script in the Workstation folder directly.</p>
+<p>We will respond on the basis of your support entitlement</p>
+<p>puoi aiutarmi?</p>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2236">
+<div id="dsq-comment-header-2236" class="dsq-comment-header">
+<cite id="dsq-cite-2236">
+<span id="dsq-author-user-2236">23thewolf</span>
+</cite>
+</div>
+<div id="dsq-comment-body-2236" class="dsq-comment-body">
+<div id="dsq-comment-message-2236" class="dsq-comment-message"><p>*mauro</p>
+</div>
+</div>
+</li> 
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'index.html';
+    var disqus_identifier = '2059%20http_/www.mauromarano.it/blog/index230e.html?p=2059';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'mauromaranoit';
+    var disqus_title = "[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'indexef72.html?cf_action=sync_comments&amp;post_id=2059';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/www.mauromarano.it\/blog\/13\/11\/2011\/video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wpa-con-aircrack-ng-su-backtrack-5\/trackback\/"    };
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+</div>  
+<div id="sidebar1" class="fluid-sidebar sidebar span4" role="complementary">
+<div id="text-3" class="widget widget_text"><h4 class="widgettitle">Social</h4> <div class="textwidget"><ul id="social-links" style="list-style-type:none;">
+<li style="display:inline;"><a href="https://www.facebook.com/pages/Mauros-Page/215034788509732"><img src="http://mauromarano.it/blog/wp-content/themes/wordpress-bootstrap/images/facebook_social_social_media_icon.png"></a></li>
+<li style="display:inline;"><a href="http://feeds.feedburner.com/MaurosPage"> <img src="http://mauromarano.it/blog/wp-content/themes/wordpress-bootstrap/images/feed_rss_icon.png" alt="feed-rss"></a></li>
+<li style="display:inline;"><a href="https://twitter.com/#!/maurospage"> <img src="http://mauromarano.it/blog/wp-content/themes/wordpress-bootstrap/images/social_social_network_twitter_icon.png" alt="twitter-account"></a></li>
+</ul></div>
+</div><div id="text-2" class="widget widget_text"> <div class="textwidget"><iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FMauros-Page%2F215034788509732&amp;width=292&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;border_color=white&amp;stream=true&amp;header=true&amp;appId=169871846429015" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:590px;" allowTransparency="true"></iframe></div>
+</div> 
+<div id="wpp-2" class="widget popular-posts">
+<h4 class="widgettitle">Articoli più letti</h4><ul class="wpp-list">
+<li><a href="../../../../downloads/index.html" title="Downloads" class="wpp-post-title" target="_self">Downloads</a> <span class="post-stats"><span class="wpp-comments">60 comments</span> | <span class="wpp-views">32.422 views</span> | <span class="wpp-date">posted on 20/09/2010</span></span></li>
+<li><a href="index.html" title="[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5" class="wpp-post-title" target="_self">[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5</a> <span class="post-stats"><span class="wpp-comments">120 comments</span> | <span class="wpp-views">20.290 views</span> | <span class="wpp-date">posted on 13/11/2011</span></span></li>
+<li><a href="../../../../24/05/2010/sblocco-della-chiavetta-vodafone-k3765-per-poterla-utilizzare-con-qualsiasi-operatore/index.html" title="Sblocco della chiavetta vodafone k3765 per poterla utilizzare con qualsiasi operatore!" class="wpp-post-title" target="_self">Sblocco della chiavetta vodafone k3765 per poterla utilizzare con qualsiasi operatore!</a> <span class="post-stats"><span class="wpp-comments">27 comments</span> | <span class="wpp-views">19.689 views</span> | <span class="wpp-date">posted on 24/05/2010</span></span></li>
+<li><a href="../../../../23/01/2009/guida-sbloccare-modem-alice-gate-2-dial-face/index.html" title="Guida: sbloccare modem alice gate 2 (dial face)" class="wpp-post-title" target="_self">Guida: sbloccare modem alice gate 2 (dial face)</a> <span class="post-stats"><span class="wpp-comments">206 comments</span> | <span class="wpp-views">15.122 views</span> | <span class="wpp-date">posted on 23/01/2009</span></span></li>
+<li><a href="../../../../21/05/2011/video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wep-con-aircrack-ng-su-backtrack-5/index.html" title="[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione WEP con AirCrack-ng su backtrack 5" class="wpp-post-title" target="_self">[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione WEP con AirCrack-ng su backtrack 5</a> <span class="post-stats"><span class="wpp-comments">215 comments</span> | <span class="wpp-views">14.618 views</span> | <span class="wpp-date">posted on 21/05/2011</span></span></li>
+<li><a href="../../../04/2011/video-tutorialcrack-di-una-rete-wifi-wep-su-mac-osx-con-kismac/index.html" title="[VIDEO TUTORIAL]Crack di una rete wifi WEP su Mac OSx con KisMac" class="wpp-post-title" target="_self">[VIDEO TUTORIAL]Crack di una rete wifi WEP su Mac OSx con KisMac</a> <span class="post-stats"><span class="wpp-comments">89 comments</span> | <span class="wpp-views">7.647 views</span> | <span class="wpp-date">posted on 13/04/2011</span></span></li>
+<li><a href="../../../../21/02/2011/ecco-il-salvataggio-di-granturismo-5-per-avere-312-auto-e-10000000-di-soldi-2/index.html" title="Ecco il salvataggio di Gran Turismo 5 per avere 312 auto e 10,000,000 di soldi!" class="wpp-post-title" target="_self">Ecco il salvataggio di Gran Turismo 5 per avere 312 auto e 10,000,000 di soldi!</a> <span class="post-stats"><span class="wpp-comments">24 comments</span> | <span class="wpp-views">5.702 views</span> | <span class="wpp-date">posted on 21/02/2011</span></span></li>
+<li><a href="../../../../22/05/2010/lista-di-forum-per-scaricare-film-giochi-e-applicazioni-da-megaupload-e-rapidshare/index.html" title="Lista di forum per scaricare film, giochi e applicazioni da megaupload e rapidshare!" class="wpp-post-title" target="_self">Lista di forum per scaricare film, giochi e applicazioni da megaupload e rapidshare!</a> <span class="post-stats"><span class="wpp-comments">4 comments</span> | <span class="wpp-views">2.909 views</span> | <span class="wpp-date">posted on 22/05/2010</span></span></li>
+<li><a href="../../../../21/07/2011/effettuare-un-ripristino-tramite-tiny-umbrella/index.html" title="Effettuare un ripristino tramite Tiny Umbrella!" class="wpp-post-title" target="_self">Effettuare un ripristino tramite Tiny Umbrella!</a> <span class="post-stats"><span class="wpp-comments">4 comments</span> | <span class="wpp-views">2.647 views</span> | <span class="wpp-date">posted on 21/07/2011</span></span></li>
+<li><a href="../../../../08/02/2011/guida-jailbreak-modifica-playstation-3-del-firmware-3-55/index.html" title="[GUIDA] Jailbreak / Modifica playstation 3 del firmware 3.55" class="wpp-post-title" target="_self">[GUIDA] Jailbreak / Modifica playstation 3 del firmware 3.55</a> <span class="post-stats"><span class="wpp-comments">61 comments</span> | <span class="wpp-views">2.249 views</span> | <span class="wpp-date">posted on 08/02/2011</span></span></li>
+</ul>
+</div>
+ 
+<div id="recent-comments-2" class="widget widget_recent_comments"><h4 class="widgettitle">Commenti recenti</h4><ul id="recentcomments"><li class="recentcomments">Luca su <a href="../../../../21/05/2011/video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wep-con-aircrack-ng-su-backtrack-5/index.html#comment-2237">[VIDEO TUTORIAL ITA] Crack di una rete wifi con protezione WEP con AirCrack-ng su backtrack 5</a></li><li class="recentcomments">23thewolf su <a href="index.html#comment-2236">[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5</a></li><li class="recentcomments">23thewolf su <a href="index.html#comment-2235">[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5</a></li><li class="recentcomments">eddysar su <a href="index.html#comment-2234">[TUTORIAL ITA] Crack di una rete wifi con protezione WPA con AirCrack-ng su backtrack 5</a></li><li class="recentcomments">ANTONIO su <a href="../../../../downloads/index.html#comment-2233">Downloads</a></li></ul></div><div id="archives-2" class="widget widget_archive"><h4 class="widgettitle">Archivi</h4> <select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Seleziona mese</option> <option value='../../../../03/2013/index.html'> marzo 2013 &nbsp;(2)</option>
+<option value='../../../../02/2013/index.html'> febbraio 2013 &nbsp;(10)</option>
+<option value='../../../../12/2012/index.html'> dicembre 2012 &nbsp;(1)</option>
+<option value='../../../../11/2012/index.html'> novembre 2012 &nbsp;(2)</option>
+<option value='../../../../10/2012/index.html'> ottobre 2012 &nbsp;(2)</option>
+<option value='../../../../09/2012/index.html'> settembre 2012 &nbsp;(1)</option>
+<option value='../../../../08/2012/index.html'> agosto 2012 &nbsp;(1)</option>
+<option value='../../../../07/2012/index.html'> luglio 2012 &nbsp;(1)</option>
+<option value='../../../../06/2012/index.html'> giugno 2012 &nbsp;(2)</option>
+<option value='../../../../05/2012/index.html'> maggio 2012 &nbsp;(2)</option>
+<option value='../../../../04/2012/index.html'> aprile 2012 &nbsp;(10)</option>
+<option value='../../../../02/2012/index.html'> febbraio 2012 &nbsp;(3)</option>
+<option value='../../../../01/2012/index.html'> gennaio 2012 &nbsp;(7)</option>
+<option value='../../../../12/2011/index.html'> dicembre 2011 &nbsp;(8)</option>
+<option value='../../../../11/2011/index.html'> novembre 2011 &nbsp;(16)</option>
+<option value='../../../../10/2011/index.html'> ottobre 2011 &nbsp;(20)</option>
+<option value='../../../../09/2011/index.html'> settembre 2011 &nbsp;(2)</option>
+<option value='../../../../07/2011/index.html'> luglio 2011 &nbsp;(5)</option>
+<option value='../../../../06/2011/index.html'> giugno 2011 &nbsp;(13)</option>
+<option value='../../../../05/2011/index.html'> maggio 2011 &nbsp;(16)</option>
+<option value='../../../../04/2011/index.html'> aprile 2011 &nbsp;(16)</option>
+<option value='../../../../03/2011/index.html'> marzo 2011 &nbsp;(41)</option>
+<option value='../../../../02/2011/index.html'> febbraio 2011 &nbsp;(24)</option>
+<option value='../../../../01/2011/index.html'> gennaio 2011 &nbsp;(9)</option>
+<option value='../../../../12/2010/index.html'> dicembre 2010 &nbsp;(6)</option>
+<option value='../../../../11/2010/index.html'> novembre 2010 &nbsp;(18)</option>
+<option value='../../../../10/2010/index.html'> ottobre 2010 &nbsp;(31)</option>
+<option value='../../../../09/2010/index.html'> settembre 2010 &nbsp;(17)</option>
+<option value='../../../../08/2010/index.html'> agosto 2010 &nbsp;(11)</option>
+<option value='../../../../07/2010/index.html'> luglio 2010 &nbsp;(3)</option>
+<option value='../../../../06/2010/index.html'> giugno 2010 &nbsp;(5)</option>
+<option value='../../../../05/2010/index.html'> maggio 2010 &nbsp;(11)</option>
+<option value='../../../../03/2010/index.html'> marzo 2010 &nbsp;(1)</option>
+<option value='../../../../02/2010/index.html'> febbraio 2010 &nbsp;(1)</option>
+<option value='../../../../11/2009/index.html'> novembre 2009 &nbsp;(1)</option>
+<option value='../../../../10/2009/index.html'> ottobre 2009 &nbsp;(4)</option>
+<option value='../../../../09/2009/index.html'> settembre 2009 &nbsp;(2)</option>
+<option value='../../../../08/2009/index.html'> agosto 2009 &nbsp;(2)</option>
+<option value='../../../../07/2009/index.html'> luglio 2009 &nbsp;(4)</option>
+<option value='../../../../06/2009/index.html'> giugno 2009 &nbsp;(11)</option>
+<option value='../../../../05/2009/index.html'> maggio 2009 &nbsp;(1)</option>
+<option value='../../../../04/2009/index.html'> aprile 2009 &nbsp;(3)</option>
+<option value='../../../../03/2009/index.html'> marzo 2009 &nbsp;(3)</option>
+<option value='../../../../02/2009/index.html'> febbraio 2009 &nbsp;(1)</option>
+<option value='../../../../01/2009/index.html'> gennaio 2009 &nbsp;(4)</option>
+<option value='../../../../12/2008/index.html'> dicembre 2008 &nbsp;(4)</option>
+</select>
+</div><div id="categories-2" class="widget widget_categories"><h4 class="widgettitle">Categorie</h4><select name='cat' id='cat' class='postform'>
+<option value='-1'>Seleziona una categoria</option>
+<option class="level-0" value="3">Android&nbsp;&nbsp;(4)</option>
+<option class="level-0" value="4">Apple&nbsp;&nbsp;(183)</option>
+<option class="level-1" value="5">&nbsp;&nbsp;&nbsp;Apple TV&nbsp;&nbsp;(2)</option>
+<option class="level-1" value="13">&nbsp;&nbsp;&nbsp;iOS&nbsp;&nbsp;(19)</option>
+<option class="level-1" value="14">&nbsp;&nbsp;&nbsp;iPad&nbsp;&nbsp;(30)</option>
+<option class="level-2" value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jailbreak&nbsp;&nbsp;(16)</option>
+<option class="level-1" value="15">&nbsp;&nbsp;&nbsp;iPad 2&nbsp;&nbsp;(24)</option>
+<option class="level-2" value="21">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jailbreak&nbsp;&nbsp;(11)</option>
+<option class="level-1" value="16">&nbsp;&nbsp;&nbsp;iphone&nbsp;&nbsp;(161)</option>
+<option class="level-2" value="56">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aggiornamento Firmware&nbsp;&nbsp;(5)</option>
+<option class="level-2" value="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apps&nbsp;&nbsp;(5)</option>
+<option class="level-2" value="60">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cydia&nbsp;&nbsp;(23)</option>
+<option class="level-2" value="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jailbreak&nbsp;&nbsp;(109)</option>
+<option class="level-1" value="17">&nbsp;&nbsp;&nbsp;iPod Touch&nbsp;&nbsp;(76)</option>
+<option class="level-2" value="19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jailbreak&nbsp;&nbsp;(16)</option>
+<option class="level-1" value="23">&nbsp;&nbsp;&nbsp;Mac&nbsp;&nbsp;(7)</option>
+<option class="level-2" value="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MacBook Pro&nbsp;&nbsp;(1)</option>
+<option class="level-2" value="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSX&nbsp;&nbsp;(3)</option>
+<option class="level-1" value="43">&nbsp;&nbsp;&nbsp;Steve Jobs&nbsp;&nbsp;(3)</option>
+<option class="level-0" value="1001">Cloud Storage&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="6">Comunicazioni interne&nbsp;&nbsp;(6)</option>
+<option class="level-0" value="8">Diretta&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="9">Guest Post&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="10">Hacking&nbsp;&nbsp;(19)</option>
+<option class="level-1" value="58">&nbsp;&nbsp;&nbsp;BackTrack 5&nbsp;&nbsp;(2)</option>
+<option class="level-0" value="11">Hardware&nbsp;&nbsp;(5)</option>
+<option class="level-0" value="12">Internet&nbsp;&nbsp;(10)</option>
+<option class="level-0" value="22">Linux&nbsp;&nbsp;(26)</option>
+<option class="level-1" value="1006">&nbsp;&nbsp;&nbsp;Server&nbsp;&nbsp;(1)</option>
+<option class="level-2" value="1007">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debian&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="25">Microsoft&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="26">Notizie&nbsp;&nbsp;(19)</option>
+<option class="level-1" value="63">&nbsp;&nbsp;&nbsp;Google&nbsp;&nbsp;(3)</option>
+<option class="level-0" value="27">Offerte Web&nbsp;&nbsp;(3)</option>
+<option class="level-0" value="28">Orrori di photoshop&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="29">OSX&nbsp;&nbsp;(13)</option>
+<option class="level-1" value="68">&nbsp;&nbsp;&nbsp;Lion&nbsp;&nbsp;(2)</option>
+<option class="level-1" value="991">&nbsp;&nbsp;&nbsp;Mountain Lion&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="31">p2p&nbsp;&nbsp;(8)</option>
+<option class="level-0" value="32">Playstation 3&nbsp;&nbsp;(23)</option>
+<option class="level-1" value="64">&nbsp;&nbsp;&nbsp;Jailbreak&nbsp;&nbsp;(5)</option>
+<option class="level-0" value="33">Playstation 4&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="34">Programmazione&nbsp;&nbsp;(26)</option>
+<option class="level-1" value="65">&nbsp;&nbsp;&nbsp;java&nbsp;&nbsp;(6)</option>
+<option class="level-1" value="66">&nbsp;&nbsp;&nbsp;Javascript&nbsp;&nbsp;(6)</option>
+<option class="level-2" value="67">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jquery&nbsp;&nbsp;(6)</option>
+<option class="level-1" value="36">&nbsp;&nbsp;&nbsp;Ruby&nbsp;&nbsp;(3)</option>
+<option class="level-2" value="986">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ruby On Rails&nbsp;&nbsp;(2)</option>
+<option class="level-0" value="35">python&nbsp;&nbsp;(4)</option>
+<option class="level-1" value="62">&nbsp;&nbsp;&nbsp;Django&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="37">Segnalazione Truffe&nbsp;&nbsp;(3)</option>
+<option class="level-0" value="1">Senza categoria&nbsp;&nbsp;(5)</option>
+<option class="level-0" value="38">Servizi Web&nbsp;&nbsp;(16)</option>
+<option class="level-0" value="39">Sicurezza informatica&nbsp;&nbsp;(7)</option>
+<option class="level-0" value="40">Siti utili&nbsp;&nbsp;(11)</option>
+<option class="level-0" value="41">Software&nbsp;&nbsp;(34)</option>
+<option class="level-0" value="42">Sony&nbsp;&nbsp;(3)</option>
+<option class="level-0" value="44">Symbian&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="998">Synology NAS&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="45">Telefonia&nbsp;&nbsp;(28)</option>
+<option class="level-1" value="52">&nbsp;&nbsp;&nbsp;Vodafone&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="46">Tools&nbsp;&nbsp;(5)</option>
+<option class="level-0" value="47">Tutorial&nbsp;&nbsp;(34)</option>
+<option class="level-0" value="48">Ubuntu&nbsp;&nbsp;(16)</option>
+<option class="level-0" value="49">Uncategorized&nbsp;&nbsp;(1)</option>
+<option class="level-0" value="50">Video Recensioni&nbsp;&nbsp;(2)</option>
+<option class="level-0" value="51">video tutorial&nbsp;&nbsp;(13)</option>
+<option class="level-0" value="53">Web 2.0&nbsp;&nbsp;(14)</option>
+<option class="level-0" value="54">Web Design&nbsp;&nbsp;(16)</option>
+<option class="level-1" value="59">&nbsp;&nbsp;&nbsp;CSS&nbsp;&nbsp;(1)</option>
+<option class="level-1" value="61">&nbsp;&nbsp;&nbsp;django&nbsp;&nbsp;(2)</option>
+<option class="level-1" value="69">&nbsp;&nbsp;&nbsp;PHP&nbsp;&nbsp;(14)</option>
+<option class="level-2" value="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yii&nbsp;&nbsp;(2)</option>
+<option class="level-0" value="55">Web Development&nbsp;&nbsp;(11)</option>
+<option class="level-1" value="993">&nbsp;&nbsp;&nbsp;javascript&nbsp;&nbsp;(1)</option>
+<option class="level-1" value="1004">&nbsp;&nbsp;&nbsp;PHP&nbsp;&nbsp;(2)</option>
+<option class="level-0" value="977">Wordpress&nbsp;&nbsp;(1)</option>
+</select>
+<script type='text/javascript'>
+/* <![CDATA[ */
+	var dropdown = document.getElementById("cat");
+	function onCatChange() {
+		if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
+			location.href = "http://www.mauromarano.it/blog/?cat="+dropdown.options[dropdown.selectedIndex].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+/* ]]> */
+</script>
+</div><div id="simpletags-2" class="widget widget-simpletags"><h4 class="widgettitle">Tag cloud</h4>
+ 
+<div class="st-tag-cloud">
+<a href="../../../../tag/redsn0w/index.html" id="tag-link-720" class="st-tags t1" title="10 topics" rel="tag" style="font-size:8pt; color:#cccccc;">RedSn0w</a>
+<a href="../../../../tag/programmazione-2/index.html" id="tag-link-687" class="st-tags t1" title="8 topics" rel="tag" style="font-size:8pt; color:#cccccc;">programmazione</a>
+<a href="../../../../tag/php/index.html" id="tag-link-649" class="st-tags t1" title="14 topics" rel="tag" style="font-size:8pt; color:#cccccc;">php</a>
+<a href="../../../../tag/jailbreak-2/index.html" id="tag-link-501" class="st-tags t10" title="87 topics" rel="tag" style="font-size:22pt; color:#000000;">jailbreak</a>
+<a href="../../../../tag/limera1n/index.html" id="tag-link-549" class="st-tags t2" title="16 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">limera1n</a>
+<a href="../../../../tag/p0sixninja/index.html" id="tag-link-633" class="st-tags t1" title="14 topics" rel="tag" style="font-size:8pt; color:#cccccc;">p0sixninja</a>
+<a href="../../../../tag/firmware/index.html" id="tag-link-348" class="st-tags t2" title="24 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">firmware</a>
+<a href="../../../../tag/javascript-2/index.html" id="tag-link-522" class="st-tags t1" title="8 topics" rel="tag" style="font-size:8pt; color:#cccccc;">javascript</a>
+<a href="../../../../tag/cydia/index.html" id="tag-link-283" class="st-tags t1" title="14 topics" rel="tag" style="font-size:8pt; color:#cccccc;">cydia</a>
+<a href="../../../../tag/ecid/index.html" id="tag-link-317" class="st-tags t1" title="12 topics" rel="tag" style="font-size:8pt; color:#cccccc;">ecid</a>
+<a href="../../../../tag/p2p/index.html" id="tag-link-31" class="st-tags t1" title="8 topics" rel="tag" style="font-size:8pt; color:#cccccc;">p2p</a>
+<a href="../../../../tag/ih8sn0w/index.html" id="tag-link-436" class="st-tags t1" title="7 topics" rel="tag" style="font-size:8pt; color:#cccccc;">iH8sn0w</a>
+<a href="../../../../tag/touch/index.html" id="tag-link-853" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">touch</a>
+<a href="../../../../tag/greenpois0n/index.html" id="tag-link-393" class="st-tags t2" title="23 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">greenpois0n</a>
+<a href="../../../../tag/iphone/index.html" id="tag-link-16" class="st-tags t7" title="66 topics" rel="tag" style="font-size:17.33pt; color:#434343;">iphone</a>
+<a href="../../../../tag/aggiornamento/index.html" id="tag-link-128" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">aggiornamento</a>
+<a href="../../../../tag/ipad/index.html" id="tag-link-468" class="st-tags t1" title="11 topics" rel="tag" style="font-size:8pt; color:#cccccc;">ipad</a>
+<a href="../../../../tag/windows/index.html" id="tag-link-940" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">windows</a>
+<a href="../../../../tag/tiny-umbrella/index.html" id="tag-link-847" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">tiny umbrella</a>
+<a href="../../../../tag/5-0-1/index.html" id="tag-link-116" class="st-tags t1" title="10 topics" rel="tag" style="font-size:8pt; color:#cccccc;">5.0.1</a>
+<a href="../../../../tag/comex/index.html" id="tag-link-263" class="st-tags t1" title="12 topics" rel="tag" style="font-size:8pt; color:#cccccc;">comex</a>
+<a href="../../../../tag/ios/index.html" id="tag-link-459" class="st-tags t3" title="28 topics" rel="tag" style="font-size:11.11pt; color:#9e9e9e;">ios</a>
+<a href="../../../../tag/5/index.html" id="tag-link-114" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">5</a>
+<a href="../../../../tag/ipod-touch/index.html" id="tag-link-488" class="st-tags t1" title="10 topics" rel="tag" style="font-size:8pt; color:#cccccc;">ipod touch</a>
+<a href="../../../../tag/shsh/index.html" id="tag-link-779" class="st-tags t1" title="12 topics" rel="tag" style="font-size:8pt; color:#cccccc;">shsh</a>
+<a href="../../../../tag/software/index.html" id="tag-link-41" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">Software</a>
+<a href="../../../../tag/google/index.html" id="tag-link-383" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">google</a>
+<a href="../../../../tag/sony/index.html" id="tag-link-804" class="st-tags t1" title="9 topics" rel="tag" style="font-size:8pt; color:#cccccc;">sony</a>
+<a href="../../../../tag/pod2g/index.html" id="tag-link-662" class="st-tags t2" title="21 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">pod2g</a>
+<a href="../../../../tag/tutorial/index.html" id="tag-link-47" class="st-tags t3" title="27 topics" rel="tag" style="font-size:11.11pt; color:#9e9e9e;">Tutorial</a>
+<a href="../../../../tag/mac/index.html" id="tag-link-553" class="st-tags t3" title="25 topics" rel="tag" style="font-size:11.11pt; color:#9e9e9e;">mac</a>
+<a href="../../../../tag/hack/index.html" id="tag-link-410" class="st-tags t1" title="7 topics" rel="tag" style="font-size:8pt; color:#cccccc;">hack</a>
+<a href="../../../../tag/playstation-3-2/index.html" id="tag-link-653" class="st-tags t2" title="16 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">playstation 3</a>
+<a href="../../../../tag/untethered/index.html" id="tag-link-897" class="st-tags t1" title="13 topics" rel="tag" style="font-size:8pt; color:#cccccc;">untethered</a>
+<a href="../../../../tag/guida/index.html" id="tag-link-397" class="st-tags t2" title="16 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">guida</a>
+<a href="../../../../tag/linux/index.html" id="tag-link-22" class="st-tags t2" title="21 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">Linux</a>
+<a href="../../../../tag/chronic-dev-team/index.html" id="tag-link-248" class="st-tags t1" title="10 topics" rel="tag" style="font-size:8pt; color:#cccccc;">chronic dev team</a>
+<a href="../../../../tag/ubuntu/index.html" id="tag-link-48" class="st-tags t2" title="16 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">Ubuntu</a>
+<a href="../../../../tag/ps3/index.html" id="tag-link-694" class="st-tags t2" title="18 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">ps3</a>
+<a href="../../../../tag/sn0wbreeze/index.html" id="tag-link-800" class="st-tags t1" title="11 topics" rel="tag" style="font-size:8pt; color:#cccccc;">sn0wbreeze</a>
+<a href="../../../../tag/video/index.html" id="tag-link-909" class="st-tags t2" title="17 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">video</a>
+<a href="../../../../tag/apple/index.html" id="tag-link-4" class="st-tags t1" title="14 topics" rel="tag" style="font-size:8pt; color:#cccccc;">Apple</a>
+<a href="../../../../tag/video-tutorial/index.html" id="tag-link-51" class="st-tags t1" title="10 topics" rel="tag" style="font-size:8pt; color:#cccccc;">video tutorial</a>
+<a href="../../../../tag/geohot/index.html" id="tag-link-377" class="st-tags t2" title="18 topics" rel="tag" style="font-size:9.56pt; color:#b5b5b5;">geohot</a>
+<a href="../../../../tag/ipod/index.html" id="tag-link-487" class="st-tags t1" title="7 topics" rel="tag" style="font-size:8pt; color:#cccccc;">ipod</a></div>
+</div><div id="nav_menu-2" class="widget widget_nav_menu"><h4 class="widgettitle">Amici</h4><div class="menu-amici-container"><ul id="menu-amici" class="menu"><li id="menu-item-2272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2272"><a href="http://macvillage.it/forum">MacVillage Forum</a></li>
+<li id="menu-item-2274" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2274"><a href="http://www.mondogeek.it/">Mondo Geek</a></li>
+<li id="menu-item-2275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2275"><a href="http://verogeek.com/">VeroGeek</a></li>
+<li id="menu-item-2279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2279"><a href="http://www.oscurodrago.it/">oscurodrago</a></li>
+</ul></div></div>
+</div>
+</div>  
+<footer role="contentinfo">
+<div id="inner-footer" class="clearfix">
+<hr/>
+<div id="widget-footer" class="clearfix row-fluid">
+</div>
+<nav class="clearfix">
+</nav>
+<p class="attribution">
+ 
+<a href="http://www.dmca.com/Protection/Status.aspx?ID=e520ed01-e531-4202-a2f4-4855990632f4" title="DMCA"> <img src="http://images.dmca.com/Badges/dmca_protected_sml_120p.png?ID=e520ed01-e531-4202-a2f4-4855990632f4" alt="DMCA.com"/></a>
+ 
+Copyright &copy; 2009-2012 Mauro&#039;s Page - Tutti i diritti riservati. Vietata la copia anche parziale. Ogni abuso derivante dal plagio, dalla contraffazione, la copiatura, la distribuzione, la commercializzazione, del materiale e dei marchi brevettati, lo sfruttamento economico o pubblicitario dei contenuti del blog sarà perseguibile civilmente e penalmente.</p>
+</div>  
+</footer>  
+</div>  
+ 
+<script src="../../../../wp-content/themes/wordpress-bootstrap/library/js/scripts.js"></script>
+<!--[if lt IE 7 ]>
+  			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+		<![endif]-->
+</body>
+
+<!-- Mirrored from www.mauromarano.it/blog/13/11/2011/video-tutorial-ita-crack-di-una-rete-wifi-con-protezione-wpa-con-aircrack-ng-su-backtrack-5/ by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 17 Oct 2013 13:21:56 GMT -->
+</html>
